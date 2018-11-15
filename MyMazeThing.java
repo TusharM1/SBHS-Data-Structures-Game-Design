@@ -200,7 +200,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
                     g.fillPolygon(rightCorner);
                     g.setColor(Color.BLACK);
                     g.drawPolygon(rightCorner);
-                    right = new Polygon(new int[]{lastPoints[0][0], lastPoints[0][3], nextPoints[0][3], nextPoints[0][0]}, new int[]{lastPoints[1][0], lastPoints[1][3], lastPoints[1][3], lastPoints[1][0]}, 4);
+                    right = new Polygon(new int[]{lastPoints[0][1], lastPoints[0][2], nextPoints[0][2], nextPoints[0][1]}, new int[]{lastPoints[1][1], lastPoints[1][2], lastPoints[1][2], lastPoints[1][1]}, 4);
                 } else {
                     right = new Polygon(new int[]{lastPoints[0][1], lastPoints[0][2], nextPoints[0][2], nextPoints[0][1]}, new int[]{lastPoints[1][1], lastPoints[1][2], lastPoints[1][2], lastPoints[1][1]}, 4);
                     g.setColor(Color.BLACK);
@@ -243,7 +243,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
                 g.fillPolygon(center);
 //                else if (breadCrumbs[yPos][xPos]) {
 //                    g.setColor(Color.ORANGE);
-                g.fillPolygon(new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], nextPoints[0][3], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][3], nextPoints[1][3], nextPoints[1][2]}, 4));
+//                g.fillPolygon(new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], nextPoints[0][3], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][3], nextPoints[1][3], nextPoints[1][2]}, 4));
 //                }
                 lastColor = lastColor.brighter();
                 lastPoints = nextPoints;
@@ -304,54 +304,31 @@ public class MyMazeThing extends JPanel implements KeyListener {
         if (e.getKeyCode() == KeyEvent.VK_RIGHT)
             direction = ((direction + 360) + 90) % 360;
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            switch (direction) {
-                case 0:
-                    if (yPos > 0 && !arrayList.get(yPos - 1)[xPos].equals("*")) {
-                        yPos--;
-                        moveCounter++;
-                        arrayList.get(yPos)[xPos] = ".";
-//                        breadCrumbs[yPos][xPos] = true;
-                    }
-                    break;
-                case 90:
-                    if (xPos < xDim - 1 && !arrayList.get(yPos)[xPos + 1].equals("*")) {
-                        xPos++;
-                        moveCounter++;
-                        arrayList.get(yPos)[xPos] = ".";
-//                        breadCrumbs[yPos][xPos] = true;
-                    }
-                    break;
-                case 180:
-                    if (yPos < yDim - 1 && !arrayList.get(yPos + 1)[xPos].equals("*")) {
-                        yPos++;
-                        moveCounter++;
-                        arrayList.get(yPos)[xPos] = ".";
-//                        breadCrumbs[yPos][xPos] = true;
-                    }
-                    break;
-                case 270:
-                    if (xPos > 0 && !arrayList.get(yPos)[xPos - 1].equals("*")) {
-                        xPos--;
-                        moveCounter++;
-                        arrayList.get(yPos)[xPos] = ".";
-//                        breadCrumbs[yPos][xPos] = true;
-                    }
-                    break;
-            }
-            if (arrayList.get(yPos)[xPos].equals("E") && keyNumber == keysNeeded) {
-                mazeNumber++;
-                setBoard();
+            if (direction == 0)
+                if (yPos > 0 && !arrayList.get(yPos - 1)[xPos].equals("*"))
+                    yPos--;
+            if (direction == 90)
+                if (xPos < xDim - 1 && !arrayList.get(yPos)[xPos + 1].equals("*"))
+                    xPos++;
+            if (direction == 180)
+                if (yPos < yDim - 1 && !arrayList.get(yPos + 1)[xPos].equals("*"))
+                    yPos++;
+            if (direction == 270)
+                if (xPos > 0 && !arrayList.get(yPos)[xPos - 1].equals("*"))
+                    xPos--;
+            if (arrayList.get(yPos)[xPos].equals("E")) {
+                if (keyNumber == keysNeeded) {
+                    mazeNumber++;
+                    setBoard();
+                }
                 return;
             }
-            if (arrayList.get(yPos)[xPos].equals("P")) {
-                viewDistance++;
-                arrayList.get(yPos)[xPos] = ".";
-            }
-            if (arrayList.get(yPos)[xPos].equals("K")) {
-                keyNumber++;
-                arrayList.get(yPos)[xPos] = ".";
-            }
         }
+        if (arrayList.get(yPos)[xPos].equals("P"))
+            viewDistance++;
+        if (arrayList.get(yPos)[xPos].equals("K"))
+            keyNumber++;
+        arrayList.get(yPos)[xPos] = ".";
         repaint(0, 0, frame.getWidth(), frame.getHeight());
     }
 
