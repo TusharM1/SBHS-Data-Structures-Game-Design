@@ -14,16 +14,16 @@ public class MyMazeThing extends JPanel implements KeyListener {
 
     JFrame frame;
     ArrayList<String[]> arrayList;
-    int xPos = 0, yPos = 0;
-    int direction = 90;
-    int xDim, yDim;
     Polygon player;
-    int mazeNumber = 0;
-    int moveCounter = 0;
-    int viewDistance = 3;
-    int keyNumber = 0, keysNeeded = 0;
+    int xPos, yPos;
+    int direction;
+    int xDim, yDim;
+    int mazeNumber;
+    int moveCounter;
+    int viewDistance;
+    int keyNumber, keysNeeded;
+    boolean is3D;
     boolean[][] breadCrumbs;
-    private boolean is3D;
 
     MyMazeThing() {
         frame = new JFrame();
@@ -32,6 +32,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
         frame.setVisible(true);
         frame.addKeyListener(this);
 
+        mazeNumber = 0;
         is3D = true;
         setBoard();
 
@@ -43,6 +44,11 @@ public class MyMazeThing extends JPanel implements KeyListener {
     }
 
     void setBoard() {
+        direction = 90;
+        moveCounter = 0;
+        viewDistance = 3;
+        keyNumber = 0;
+        keysNeeded = 0;
         try {
             String path = "src/Maze/maze" + mazeNumber + ".txt";
             BufferedReader reader = new BufferedReader(new FileReader(new File(path)));
@@ -76,6 +82,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
             g.setColor(Color.BLACK);
             g.setFont(new Font("LucidaGrande", Font.PLAIN, 40));
             g.drawString("Success!", frame.getWidth() / 2, frame.getHeight() / 2);
+
             frame.removeKeyListener(this);
         } catch (Exception e) {
             e.printStackTrace();
@@ -84,7 +91,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        if (is3D) {
+        if (is3D) { // 3D Part of Maze
             ArrayList<ArrayList<Character>> parsed = new ArrayList<>();
             if (direction == 0)
                 for (int i = -1 * viewDistance; i <= 0; i++)
@@ -142,20 +149,12 @@ public class MyMazeThing extends JPanel implements KeyListener {
                                 temp.add('*');
                         parsed.add(temp);
                     }
-//            for (int i = 0; i < parsed.size(); i++) {
-//                if (parsed.get(i).get(1) == ' ' && breadCrumbs[yPos + i][xPos])
-//                    g.setColor(Color.ORANGE);
-//                    g.fillPolygon(new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], nextPoints[0][3], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][3], nextPoints[1][3], nextPoints[1][2]}, 4));
-//            }
             while (parsed.size() != viewDistance + 1) {
                 ArrayList<Character> list = new ArrayList<>();
                 for (int i = 0; i < 3; i++)
                     list.add('*');
                 parsed.add(0, list);
             }
-            for (ArrayList ca : parsed)
-                System.out.println(String.valueOf(ca));
-            System.out.println();
             g.setColor(new Color(0xCCCCCC));
             g.fillRect(0, 0, this.getWidth(), this.getHeight());
             int addX = (int) (Math.cos(Math.atan2(this.getHeight(), this.getWidth())) * 100 * (3.0 / viewDistance)), addY = (int) (Math.sin(Math.atan2(this.getHeight(), this.getWidth())) * 100 * (3.0 / viewDistance));
@@ -169,16 +168,16 @@ public class MyMazeThing extends JPanel implements KeyListener {
             Color lastColor = new Color(0x111111);
             g.setColor(lastColor.darker());
             g.fillPolygon(lastPoints[0], lastPoints[1], 4);
-            for (int i = 0; i < parsed.size(); i++) {
+            for (ArrayList<Character> ca : parsed) {
                 g.setColor(lastColor);
                 int[][] nextPoints = {{lastPoints[0][0] - addX, lastPoints[0][1] + addX, lastPoints[0][2] + addX, lastPoints[0][3] - addX},
                         {lastPoints[1][0] - addY, lastPoints[1][1] - addY, lastPoints[1][2] + addY, lastPoints[1][3] + addY}};
                 Polygon left, right;
-                if (parsed.get(i).get(0) == '*') {
+                if (ca.get(0) == '*') {
                     left = new Polygon(new int[]{lastPoints[0][0], lastPoints[0][3], nextPoints[0][3], nextPoints[0][0]}, new int[]{lastPoints[1][0], lastPoints[1][3], nextPoints[1][3], nextPoints[1][0]}, 4);
                     g.setColor(Color.BLACK);
                     g.drawPolygon(left);
-                } else if (parsed.get(i).get(0) == '.' || parsed.get(i).get(0) == 'S') {
+                } else if (ca.get(0) == '.' || ca.get(0) == 'S') {
                     Polygon leftCorner = new Polygon(new int[]{lastPoints[0][3], nextPoints[0][3], nextPoints[0][3]}, new int[]{lastPoints[1][3], lastPoints[1][3], nextPoints[1][3]}, 3);
                     g.setColor(Color.ORANGE);
                     g.fillPolygon(leftCorner);
@@ -190,11 +189,11 @@ public class MyMazeThing extends JPanel implements KeyListener {
                     g.setColor(Color.BLACK);
                     g.drawPolygon(left);
                 }
-                if (parsed.get(i).get(2) == '*') {
+                if (ca.get(2) == '*') {
                     right = new Polygon(new int[]{lastPoints[0][1], lastPoints[0][2], nextPoints[0][2], nextPoints[0][1]}, new int[]{lastPoints[1][1], lastPoints[1][2], nextPoints[1][2], nextPoints[1][1]}, 4);
                     g.setColor(Color.BLACK);
                     g.drawPolygon(right);
-                } else if (parsed.get(i).get(2) == '.' || parsed.get(i).get(2) == 'S') {
+                } else if (ca.get(2) == '.' || ca.get(2) == 'S') {
                     Polygon rightCorner = new Polygon(new int[]{lastPoints[0][2], nextPoints[0][2], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][2], nextPoints[1][2]}, 3);
                     g.setColor(Color.ORANGE);
                     g.fillPolygon(rightCorner);
@@ -216,7 +215,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
                 g.drawLine(lastPoints[0][2], lastPoints[1][2], lastPoints[0][3], lastPoints[1][3]);
                 g.drawLine(nextPoints[0][0], nextPoints[1][0], nextPoints[0][1], nextPoints[1][1]);
                 g.drawLine(nextPoints[0][2], nextPoints[1][2], nextPoints[0][3], nextPoints[1][3]);
-                char centerTile = parsed.get(i).get(1);
+                char centerTile = ca.get(1);
                 Polygon center = new Polygon(nextPoints[0], nextPoints[1], 4);
                 g.drawPolygon(center);
                 if (centerTile == '*')
@@ -241,17 +240,14 @@ public class MyMazeThing extends JPanel implements KeyListener {
                 } else
                     continue;
                 g.fillPolygon(center);
-//                else if (breadCrumbs[yPos][xPos]) {
-//                    g.setColor(Color.ORANGE);
-//                g.fillPolygon(new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], nextPoints[0][3], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][3], nextPoints[1][3], nextPoints[1][2]}, 4));
-//                }
                 lastColor = lastColor.brighter();
                 lastPoints = nextPoints;
             }
             g.setColor(Color.ORANGE);
             g.fillPolygon(new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], 0, this.getWidth()}, new int[]{lastPoints[1][2], lastPoints[1][3], this.getHeight(), this.getHeight()}, 4));
-            g.drawString(moveCounter + "", 20, 20);
-        } else {
+            g.setColor(Color.BLACK);
+            g.drawString(moveCounter + "", 30, 15);
+        } else { // 2D Part of Maze
             g.setColor(Color.LIGHT_GRAY);
             g.fillRect(0, 0, frame.getWidth(), frame.getHeight());
             g.setColor(Color.WHITE);
@@ -305,24 +301,28 @@ public class MyMazeThing extends JPanel implements KeyListener {
             direction = ((direction + 360) + 90) % 360;
         if (e.getKeyCode() == KeyEvent.VK_UP) {
             if (direction == 0)
-                if (yPos > 0 && !arrayList.get(yPos - 1)[xPos].equals("*"))
+                if (yPos > 0 && ((!arrayList.get(yPos - 1)[xPos].equals("*") && !arrayList.get(yPos - 1)[xPos].equals("E")) || (arrayList.get(yPos - 1)[xPos].equals("E") && keyNumber == keysNeeded)))
                     yPos--;
             if (direction == 90)
-                if (xPos < xDim - 1 && !arrayList.get(yPos)[xPos + 1].equals("*"))
+                if (xPos < xDim - 1 && ((!arrayList.get(yPos)[xPos + 1].equals("*") && !arrayList.get(yPos)[xPos + 1].equals("E")) || (arrayList.get(yPos)[xPos + 1].equals("E") && keyNumber == keysNeeded)))
                     xPos++;
             if (direction == 180)
-                if (yPos < yDim - 1 && !arrayList.get(yPos + 1)[xPos].equals("*"))
+                if (yPos < yDim - 1 && ((!arrayList.get(yPos + 1)[xPos].equals("*") && !arrayList.get(yPos + 1)[xPos].equals("E")) || (arrayList.get(yPos + 1)[xPos].equals("E") && keyNumber == keysNeeded)))
                     yPos++;
             if (direction == 270)
-                if (xPos > 0 && !arrayList.get(yPos)[xPos - 1].equals("*"))
+                if (xPos > 0 && ((!arrayList.get(yPos)[xPos - 1].equals("*") && !arrayList.get(yPos)[xPos - 1].equals("E")) || (arrayList.get(yPos)[xPos - 1].equals("E") && keyNumber == keysNeeded)))
                     xPos--;
+            moveCounter++;
             if (arrayList.get(yPos)[xPos].equals("E")) {
-                if (keyNumber == keysNeeded) {
-                    mazeNumber++;
-                    setBoard();
-                }
+                mazeNumber++;
+                setBoard();
+                repaint(0, 0, frame.getWidth(), frame.getHeight());
                 return;
             }
+        }
+        if (arrayList.get(yPos)[xPos].equals("S")) {
+            repaint(0, 0, frame.getWidth(), frame.getHeight());
+            return;
         }
         if (arrayList.get(yPos)[xPos].equals("P"))
             viewDistance++;
@@ -332,12 +332,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
         repaint(0, 0, frame.getWidth(), frame.getHeight());
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-    }
+    @Override public void keyTyped(KeyEvent e) {}
+    @Override public void keyReleased(KeyEvent e) {}
 
 }
