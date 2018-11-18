@@ -92,6 +92,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (is3D) { // 3D Part of Maze
+            //<editor-fold desc="Parsed">
             ArrayList<ArrayList<Character>> parsed = new ArrayList<>();
             if (direction == 0)
                 for (int i = -1 * viewDistance; i <= 0; i++)
@@ -155,29 +156,55 @@ public class MyMazeThing extends JPanel implements KeyListener {
                     list.add('*');
                 parsed.add(0, list);
             }
+            //</editor-fold>
             g.setColor(new Color(0xCCCCCC));
             g.fillRect(0, 0, this.getWidth(), this.getHeight());
-            int addX = (int) (Math.cos(Math.atan2(this.getHeight(), this.getWidth())) * 100 * (3.0 / viewDistance)), addY = (int) (Math.sin(Math.atan2(this.getHeight(), this.getWidth())) * 100 * (3.0 / viewDistance));
-            int lastX = (viewDistance + 1) * addX, lastY = (viewDistance + 1) * addY;
+            //<editor-fold desc="Foreshortening">
+            int addX = (int) (Math.cos(Math.atan2(this.getHeight(), this.getWidth())) * 100), addY = (int) (Math.sin(Math.atan2(this.getHeight(), this.getWidth())) * 100);
+            ArrayList<Integer[]> wallPoints = new ArrayList<>();
+            int x, y, oldX = 0, oldY = 0, newX = addX, newY = addY;
+            double slope1 = 1. * getHeight() / getWidth(), slope2 = 1. * (getHeight() / 2.0 - oldY) / (newX - oldX);
+            for (int i = 0; i <= viewDistance + 1; i++) {
+                x = (int) ((slope2 * oldX - oldY + getHeight()) / (slope2 + slope1));
+                y = (int) (-1 * slope1 * x) + getHeight();
+                wallPoints.add(0, new Integer[]{oldX, oldY});
+                g.setColor(Color.BLACK);
+//                g.drawLine(oldX, oldY, x, y);
+                g.fillArc(oldX - 5, oldY - 5, 10, 10, 0, 360);
+                System.out.printf("%d %d %d %d %d %d %f %f %d %d\n", x, y, oldX, oldY, newX, newY, slope1, slope2, getWidth(), getHeight());
+                oldX = newX;
+                oldY = newY;
+                newX = x;
+                newY = (int) (slope1 * x);
+                slope2 = 1. * (getHeight() / 2.0 - oldY) / (newX - oldX);
+            }
+            int lastX = wallPoints.get(0)[0];
+            int lastY = wallPoints.get(0)[1];
             int[][] lastPoints = {{lastX, this.getWidth() - lastX, this.getWidth() - lastX, lastX}, {lastY, lastY, this.getHeight() - lastY, this.getHeight() - lastY}};
+            //</editor-fold>
+            //<editor-fold desc="Outward Lines">
             g.setColor(Color.BLACK);
             g.drawLine(lastPoints[0][0], lastPoints[1][0], 0, 0);
             g.drawLine(lastPoints[0][1], lastPoints[1][1], this.getWidth(), 0);
             g.drawLine(lastPoints[0][2], lastPoints[1][2], this.getWidth(), this.getHeight());
             g.drawLine(lastPoints[0][3], lastPoints[1][3], 0, this.getHeight());
             Color lastColor = new Color(0x111111);
-            g.setColor(lastColor.darker());
-            g.fillPolygon(lastPoints[0], lastPoints[1], 4);
-            for (ArrayList<Character> ca : parsed) {
+            //</editor-fold>
+//            //<editor-fold desc="Center Tile Reset">
+//            g.setColor(lastColor.darker());
+//            g.fillPolygon(lastPoints[0], lastPoints[1], 4);
+//            //</editor-fold>
+            for (int i = 0; i < parsed.size(); i++) {
                 g.setColor(lastColor);
-                int[][] nextPoints = {{lastPoints[0][0] - addX, lastPoints[0][1] + addX, lastPoints[0][2] + addX, lastPoints[0][3] - addX},
-                        {lastPoints[1][0] - addY, lastPoints[1][1] - addY, lastPoints[1][2] + addY, lastPoints[1][3] + addY}};
+                int localX = wallPoints.get(i + 1)[0], localY = wallPoints.get(i + 1)[1];
+                int[][] nextPoints = {{localX, getWidth() - localX, getWidth() - localX, localX}, {getHeight() - localY, getHeight() - localY, localY, localY}};
+                //<editor-fold desc="Left Right Tiles">
                 Polygon left, right;
-                if (ca.get(0) == '*') {
+                if (parsed.get(i).get(0) == '*') {
                     left = new Polygon(new int[]{lastPoints[0][0], lastPoints[0][3], nextPoints[0][3], nextPoints[0][0]}, new int[]{lastPoints[1][0], lastPoints[1][3], nextPoints[1][3], nextPoints[1][0]}, 4);
                     g.setColor(Color.BLACK);
                     g.drawPolygon(left);
-                } else if (ca.get(0) == '.' || ca.get(0) == 'S') {
+                } else if (parsed.get(i).get(0) == '.' || parsed.get(i).get(0) == 'S') {
                     Polygon leftCorner = new Polygon(new int[]{lastPoints[0][3], nextPoints[0][3], nextPoints[0][3]}, new int[]{lastPoints[1][3], lastPoints[1][3], nextPoints[1][3]}, 3);
                     g.setColor(Color.ORANGE);
                     g.fillPolygon(leftCorner);
@@ -189,11 +216,11 @@ public class MyMazeThing extends JPanel implements KeyListener {
                     g.setColor(Color.BLACK);
                     g.drawPolygon(left);
                 }
-                if (ca.get(2) == '*') {
+                if (parsed.get(i).get(2) == '*') {
                     right = new Polygon(new int[]{lastPoints[0][1], lastPoints[0][2], nextPoints[0][2], nextPoints[0][1]}, new int[]{lastPoints[1][1], lastPoints[1][2], nextPoints[1][2], nextPoints[1][1]}, 4);
                     g.setColor(Color.BLACK);
                     g.drawPolygon(right);
-                } else if (ca.get(2) == '.' || ca.get(2) == 'S') {
+                } else if (parsed.get(i).get(2) == '.' || parsed.get(i).get(2) == 'S') {
                     Polygon rightCorner = new Polygon(new int[]{lastPoints[0][2], nextPoints[0][2], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][2], nextPoints[1][2]}, 3);
                     g.setColor(Color.ORANGE);
                     g.fillPolygon(rightCorner);
@@ -211,42 +238,53 @@ public class MyMazeThing extends JPanel implements KeyListener {
                 g.setColor(Color.BLACK);
                 g.drawPolygon(left);
                 g.drawPolygon(right);
-                g.drawLine(lastPoints[0][0], lastPoints[1][0], lastPoints[0][1], lastPoints[1][1]);
-                g.drawLine(lastPoints[0][2], lastPoints[1][2], lastPoints[0][3], lastPoints[1][3]);
-                g.drawLine(nextPoints[0][0], nextPoints[1][0], nextPoints[0][1], nextPoints[1][1]);
-                g.drawLine(nextPoints[0][2], nextPoints[1][2], nextPoints[0][3], nextPoints[1][3]);
-                char centerTile = ca.get(1);
-                Polygon center = new Polygon(nextPoints[0], nextPoints[1], 4);
-                g.drawPolygon(center);
-                if (centerTile == '*')
-                    g.setColor(lastColor.brighter());
-                else if (centerTile == 'E')
-                    if (keyNumber < keysNeeded)
-                        g.setColor(Color.RED);
-                    else
-                        g.setColor(Color.GREEN);
-                else if (centerTile == 'S')
-                    g.setColor(Color.CYAN);
-                else if (centerTile == 'P')
-                    g.setColor(Color.YELLOW);
-                else if (centerTile == 'K')
-                    g.setColor(Color.PINK);
-                else if (centerTile == '.') {
-                    g.setColor(Color.ORANGE);
-                    center = new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], nextPoints[0][3], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][3], nextPoints[1][3], nextPoints[1][2]}, 4);
-                } else if (centerTile == ' ') {
-                    g.setColor(new Color(0xCCCCCC));
-                    center = new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], nextPoints[0][3], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][3], nextPoints[1][3], nextPoints[1][2]}, 4);
-                } else
-                    continue;
-                g.fillPolygon(center);
+                //</editor-fold>
+//                //<editor-fold desc="Up Down Tiles">
+//                g.drawLine(lastPoints[0][0], lastPoints[1][0], lastPoints[0][1], lastPoints[1][1]);
+//                g.drawLine(lastPoints[0][2], lastPoints[1][2], lastPoints[0][3], lastPoints[1][3]);
+//                g.drawLine(nextPoints[0][0], nextPoints[1][0], nextPoints[0][1], nextPoints[1][1]);
+//                g.drawLine(nextPoints[0][2], nextPoints[1][2], nextPoints[0][3], nextPoints[1][3]);
+//                //</editor-fold>
+//                //<editor-fold desc="Center Tile">
+//                char centerTile = parsed.get(i).get(1);
+//                Polygon center = new Polygon(nextPoints[0], nextPoints[1], 4);
+//                g.drawPolygon(center);
+//                if (centerTile == '*')
+//                    g.setColor(lastColor.brighter());
+//                else if (centerTile == 'E')
+//                    if (keyNumber < keysNeeded)
+//                        g.setColor(Color.RED);
+//                    else
+//                        g.setColor(Color.GREEN);
+//                else if (centerTile == 'S')
+//                    g.setColor(Color.CYAN);
+//                else if (centerTile == 'P')
+//                    g.setColor(Color.YELLOW);
+//                else if (centerTile == 'K')
+//                    g.setColor(Color.PINK);
+//                else if (centerTile == '.') {
+//                    g.setColor(Color.ORANGE);
+//                    center = new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], nextPoints[0][3], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][3], nextPoints[1][3], nextPoints[1][2]}, 4);
+//                } else if (centerTile == ' ') {
+//                    g.setColor(new Color(0xCCCCCC));
+//                    center = new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], nextPoints[0][3], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][3], nextPoints[1][3], nextPoints[1][2]}, 4);
+//                } else
+//                    continue;
+//                g.fillPolygon(center);
+//                //</editor-fold>
+                g.drawPolygon(lastPoints[0], lastPoints[1], 4);
+                System.out.println(localX + " " + localY);
                 lastColor = lastColor.brighter();
                 lastPoints = nextPoints;
             }
-            g.setColor(Color.ORANGE);
-            g.fillPolygon(new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], 0, this.getWidth()}, new int[]{lastPoints[1][2], lastPoints[1][3], this.getHeight(), this.getHeight()}, 4));
+//            //<editor-fold desc="Bottom Corners">
+//            g.setColor(Color.ORANGE);
+//            g.fillPolygon(new Polygon(new int[]{lastPoints[0][2], lastPoints[0][3], 0, this.getWidth()}, new int[]{lastPoints[1][2], lastPoints[1][3], this.getHeight(), this.getHeight()}, 4));
+//            //</editor-fold>
+            //<editor-fold desc="View Counter">
             g.setColor(Color.BLACK);
             g.drawString(moveCounter + "", 30, 15);
+            //</editor-fold>
         } else { // 2D Part of Maze
             g.setColor(Color.LIGHT_GRAY);
             g.fillRect(0, 0, frame.getWidth(), frame.getHeight());
@@ -332,7 +370,12 @@ public class MyMazeThing extends JPanel implements KeyListener {
         repaint(0, 0, frame.getWidth(), frame.getHeight());
     }
 
-    @Override public void keyTyped(KeyEvent e) {}
-    @Override public void keyReleased(KeyEvent e) {}
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+    }
 
 }
