@@ -1,4 +1,4 @@
-package Maze;
+package Quarter_1.Maze;
 
 import javax.swing.*;
 import java.awt.*;
@@ -53,7 +53,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
         keysNeeded = 0;
         try {
             arrayList = new ArrayList<>();
-            String path = "src/Maze/maze" + mazeNumber + ".txt";
+            String path = "src/Quarter_1/Maze/maze" + mazeNumber + ".txt";
             BufferedReader reader = new BufferedReader(new FileReader(new File(path)));
             String input;
             int row = 0;
@@ -88,6 +88,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        //<editor-fold desc="Success Clause">
         if (!isRunning) {
             g.setColor(Color.LIGHT_GRAY);
             g.fillRect(0, 0, frame.getWidth(), frame.getHeight());
@@ -96,7 +97,8 @@ public class MyMazeThing extends JPanel implements KeyListener {
             g.drawString("Success!", frame.getWidth() / 2, frame.getHeight() / 2);
             return;
         }
-        //<editor-fold desc="3D Part of Maze">
+        //</editor-fold>
+        //<editor-fold desc="3D Part of Quarter_1.Maze">
         if (is3D) {
             //<editor-fold desc="Parsed">
             ArrayList<ArrayList<Character>> parsed = new ArrayList<>();
@@ -166,7 +168,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
             g.setColor(new Color(0xCCCCCC));
             g.fillRect(0, 0, this.getWidth(), this.getHeight());
             //<editor-fold desc="Foreshortening">
-            int addX = (int) (Math.cos(Math.atan2(this.getHeight(), this.getWidth())) * 100), addY = (int) (Math.sin(Math.atan2(this.getHeight(), this.getWidth())) * 100);
+            int addX = (int) (Math.cos(Math.atan2(this.getHeight(), this.getWidth())) * 150), addY = (int) (Math.sin(Math.atan2(this.getHeight(), this.getWidth())) * 150);
             ArrayList<Integer[]> wallPoints = new ArrayList<>();
             int next, oldX = 0, oldY = 0, newX = addX, newY = addY;
             double slope1 = 1. * getHeight() / getWidth(), slope2 = 1. * (getHeight() / 2.0 - oldY) / (newX - oldX);
@@ -201,38 +203,29 @@ public class MyMazeThing extends JPanel implements KeyListener {
                 int[][] nextPoints = {{localX, getWidth() - localX, getWidth() - localX, localX}, {localY, localY, getHeight() - localY, getHeight() - localY}};
                 //<editor-fold desc="Left Right Tiles">
                 Polygon left, right;
-                if (parsed.get(i).get(0) == '*') {
-                    left = new Polygon(new int[]{lastPoints[0][0], lastPoints[0][3], nextPoints[0][3], nextPoints[0][0]}, new int[]{lastPoints[1][0], lastPoints[1][3], nextPoints[1][3], nextPoints[1][0]}, 4);
-                    g.setColor(Color.BLACK);
-                    g.drawPolygon(left);
-                } else if (parsed.get(i).get(0) == '.' || parsed.get(i).get(0) == 'S') {
+                if (parsed.get(i).get(0) == '.' || parsed.get(i).get(0) == 'S') {
                     Polygon leftCorner = new Polygon(new int[]{lastPoints[0][3], nextPoints[0][3], nextPoints[0][3]}, new int[]{lastPoints[1][3], lastPoints[1][3], nextPoints[1][3]}, 3);
                     g.setColor(Color.ORANGE);
                     g.fillPolygon(leftCorner);
                     g.setColor(Color.BLACK);
                     g.drawPolygon(leftCorner);
                     left = new Polygon(new int[]{lastPoints[0][0], lastPoints[0][3], nextPoints[0][3], nextPoints[0][0]}, new int[]{lastPoints[1][0], lastPoints[1][3], lastPoints[1][3], lastPoints[1][0]}, 4);
-                } else {
+                } else if (parsed.get(i).get(0) == '*')
+                    left = new Polygon(new int[]{lastPoints[0][0], lastPoints[0][3], nextPoints[0][3], nextPoints[0][0]}, new int[]{lastPoints[1][0], lastPoints[1][3], nextPoints[1][3], nextPoints[1][0]}, 4);
+                else
                     left = new Polygon(new int[]{lastPoints[0][0], lastPoints[0][3], nextPoints[0][3], nextPoints[0][0]}, new int[]{lastPoints[1][0], lastPoints[1][3], lastPoints[1][3], lastPoints[1][0]}, 4);
-                    g.setColor(Color.BLACK);
-                    g.drawPolygon(left);
-                }
-                if (parsed.get(i).get(2) == '*') {
-                    right = new Polygon(new int[]{lastPoints[0][1], lastPoints[0][2], nextPoints[0][2], nextPoints[0][1]}, new int[]{lastPoints[1][1], lastPoints[1][2], nextPoints[1][2], nextPoints[1][1]}, 4);
-                    g.setColor(Color.BLACK);
-                    g.drawPolygon(right);
-                } else if (parsed.get(i).get(2) == '.' || parsed.get(i).get(2) == 'S') {
+
+                if (parsed.get(i).get(2) == '.' || parsed.get(i).get(2) == 'S') {
                     Polygon rightCorner = new Polygon(new int[]{lastPoints[0][2], nextPoints[0][2], nextPoints[0][2]}, new int[]{lastPoints[1][2], lastPoints[1][2], nextPoints[1][2]}, 3);
                     g.setColor(Color.ORANGE);
                     g.fillPolygon(rightCorner);
                     g.setColor(Color.BLACK);
                     g.drawPolygon(rightCorner);
                     right = new Polygon(new int[]{lastPoints[0][1], lastPoints[0][2], nextPoints[0][2], nextPoints[0][1]}, new int[]{lastPoints[1][1], lastPoints[1][2], lastPoints[1][2], lastPoints[1][1]}, 4);
-                } else {
+                } else if (parsed.get(i).get(2) == '*')
+                    right = new Polygon(new int[]{lastPoints[0][1], lastPoints[0][2], nextPoints[0][2], nextPoints[0][1]}, new int[]{lastPoints[1][1], lastPoints[1][2], nextPoints[1][2], nextPoints[1][1]}, 4);
+                else
                     right = new Polygon(new int[]{lastPoints[0][1], lastPoints[0][2], nextPoints[0][2], nextPoints[0][1]}, new int[]{lastPoints[1][1], lastPoints[1][2], lastPoints[1][2], lastPoints[1][1]}, 4);
-                    g.setColor(Color.BLACK);
-                    g.drawPolygon(right);
-                }
                 g.setColor(lastColor);
                 g.fillPolygon(left);
                 g.fillPolygon(right);
@@ -288,7 +281,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
             //</editor-fold>
         }
         //</editor-fold>
-        //<editor-fold desc="2D Part of Maze">
+        //<editor-fold desc="2D Part of Quarter_1.Maze">
         else {
             g.setColor(Color.LIGHT_GRAY);
             g.fillRect(0, 0, frame.getWidth(), frame.getHeight());
