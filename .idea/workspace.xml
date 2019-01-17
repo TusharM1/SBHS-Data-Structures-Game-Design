@@ -4,9 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/Quarter_1/Q8_WhenWillYouGetThere/WhenWillYouGetThere.java" description="                System.out.printf(&quot;Arrival Date an..." line="30" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="452d0187-38db-4ec3-a0dd-8420419d069a" name="Default Changelist" comment="Finished Maze">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="452d0187-38db-4ec3-a0dd-8420419d069a" name="Default Changelist" comment="I don't really know what is this">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            <state relative-caret-position="267">
+              <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_2/HashMapExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_2/HashMapNumCounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -69,9 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Q7_IndexCards/IndexCards.java" />
-        <option value="$PROJECT_DIR$/src/Q6_Calender/Calender.java" />
-        <option value="$PROJECT_DIR$/src/Q8_WhenWillYouGetThere/Spiraling.java" />
         <option value="$PROJECT_DIR$/src/Q9_Spiraling/fileName.txt" />
         <option value="$PROJECT_DIR$/src/Q9_Spiraling/Spiraling_Old.java" />
         <option value="$PROJECT_DIR$/src/Q9_Spiraling/Spiraling.java" />
@@ -120,12 +135,16 @@
         <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Car_Data/CarData.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Word_Reader/WordReader.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Best_SciFi_Books/BestSciFiBooks.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/HashMapExample.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/HashMapNumCounter.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="720" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="720" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -166,7 +185,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="fontsize&#9;ACTION&#9;EditorIncreaseFontSize" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547571911525" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547750175553" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -210,13 +229,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.December11">
-    <configuration name="BestSciFiBooks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_2.Stack_Problems.Best_SciFi_Books.BestSciFiBooks" />
+  <component name="RunManager" selected="Application.HashMapNumCounter">
+    <configuration name="HashMapExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.HashMapExample" />
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quarter_2.Stack_Problems.Best_SciFi_Books.*" />
+          <option name="PATTERN" value="Quarter_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -224,12 +243,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinaryToDecimal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_2.Stack_Problems.Binary_To_Decimal.BinaryToDecimal" />
+    <configuration name="HashMapNumCounter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.HashMapNumCounter" />
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quarter_2.Stack_Problems.Binary_To_Decimal.*" />
+          <option name="PATTERN" value="Quarter_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -237,59 +256,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="December11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_2.DoNows.December11" />
-      <module name="DataStructuresAndGameDesignProblems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Quarter_2.DoNows.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReverseString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_2.Stack_Problems.Reverse_String.ReverseString" />
-      <module name="DataStructuresAndGameDesignProblems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Quarter_2.Stack_Problems.Reverse_String.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StackDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_2.Stack_Problems.Stack_Demo.StackDemo" />
-      <module name="DataStructuresAndGameDesignProblems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Quarter_2.Stack_Problems.Stack_Demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.BestSciFiBooks" />
-      <item itemvalue="Application.BinaryToDecimal" />
-      <item itemvalue="Application.December11" />
-      <item itemvalue="Application.ReverseString" />
-      <item itemvalue="Application.StackDemo" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.December11" />
-        <item itemvalue="Application.BinaryToDecimal" />
-        <item itemvalue="Application.BestSciFiBooks" />
-        <item itemvalue="Application.ReverseString" />
-        <item itemvalue="Application.StackDemo" />
+        <item itemvalue="Application.HashMapNumCounter" />
+        <item itemvalue="Application.HashMapExample" />
       </list>
     </recent_temporary>
   </component>
@@ -332,11 +302,19 @@
       <option name="project" value="LOCAL" />
       <updated>1542575474579</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="I don't really know what is this">
+      <created>1547744488172</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547744488172</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2739628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -347,7 +325,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3133758" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3133758" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.510828" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,7 +354,8 @@
     <MESSAGE value="Finishing Touches" />
     <MESSAGE value="Almost Working Foreshortening" />
     <MESSAGE value="Finished Maze" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Maze" />
+    <MESSAGE value="I don't really know what is this" />
+    <option name="LAST_COMMIT_MESSAGE" value="I don't really know what is this" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -469,14 +448,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Maze/maze0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/LambdaTest.java" />
     <entry file="file://$PROJECT_DIR$/src/Quarter_1/Maze/Temp.java" />
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Best_SciFi_Books/100BestSciFi21stCentury.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -774,8 +745,22 @@
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/Set_Problems/TreeSet.java" />
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        <state relative-caret-position="267">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/HashMapNumCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/HashMapExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>

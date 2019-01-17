@@ -1,3 +1,5 @@
+package Quarter_2;
+
 import java.util.TreeSet;
 import java.util.HashSet;
 import java.util.ArrayList;
@@ -31,9 +33,6 @@ public class SetProgram
 		System.out.println("Walking through the Set");
 		for(Integer num:set)
 			System.out.println("Value: "+num);
-
-
-
 
 
 
