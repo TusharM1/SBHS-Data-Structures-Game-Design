@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/Quarter_1/Q8_WhenWillYouGetThere/WhenWillYouGetThere.java" description="                System.out.printf(&quot;Arrival Date an..." line="30" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="452d0187-38db-4ec3-a0dd-8420419d069a" name="Default Changelist" comment="Finished Maze">
+      <change beforePath="$PROJECT_DIR$/src/Quarter_1/Maze/MyMazeThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_1/Maze/MyMazeThing.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-822766110">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="2464" />
+          <entry key="txt" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2464" />
+          <entry key="PLAIN_TEXT" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="fileName" value="2" />
+          <entry key="java" value="5" />
+          <entry key="txt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="5" />
+          <entry key="PLAIN_TEXT" value="6" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="984159347">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="4" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="20" />
+          <entry key="java" value="4670" />
+          <entry key="txt" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="4670" />
+          <entry key="PLAIN_TEXT" value="27" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="48" />
+          <entry key="txt" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="48" />
+          <entry key="PLAIN_TEXT" value="25" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-254939244">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.0" value="5" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="4" />
+          <entry key="project.open.time.5" value="5" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="8" />
+          <entry key="java" value="5752" />
+          <entry key="txt" value="184" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="5752" />
+          <entry key="PLAIN_TEXT" value="192" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="35" />
+          <entry key="txt" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="35" />
+          <entry key="PLAIN_TEXT" value="16" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="183093017">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="10" />
+          <entry key="txt" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="10" />
+          <entry key="PLAIN_TEXT" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="7158" />
+          <entry key="txt" value="281" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="7158" />
+          <entry key="PLAIN_TEXT" value="281" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1726532178">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="8" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="84" />
+          <entry key="PLAIN_TEXT" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="7948" />
+          <entry key="PLAIN_TEXT" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>PM</find>
+      <find>paintcomponent</find>
+      <find>paintComponent</find>
+      <find>width</find>
+      <find>array</find>
+      <find>maze</find>
+      <find>3</find>
+      <find>mazeNumber</find>
+      <find>File</find>
+      <find>&quot; &quot;</find>
+      <find>moveCounter</find>
+      <find>addX</find>
+      <find>newY</find>
+      <find>red</find>
+      <find>arc</find>
+      <find>John Scalzi</find>
+      <find>Hugh Howey</find>
+      <find>out</find>
+      <find>iterator</find>
+      <find>next</find>
+      <find>getNext</find>
+      <find>hasNe</find>
+      <find>size</find>
+      <find>getNe</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/Quarter_1/Maze" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Q7_IndexCards/IndexCards.java" />
+        <option value="$PROJECT_DIR$/src/Q6_Calender/Calender.java" />
+        <option value="$PROJECT_DIR$/src/Q8_WhenWillYouGetThere/Spiraling.java" />
+        <option value="$PROJECT_DIR$/src/Q9_Spiraling/fileName.txt" />
+        <option value="$PROJECT_DIR$/src/Q9_Spiraling/Spiraling_Old.java" />
+        <option value="$PROJECT_DIR$/src/Q9_Spiraling/Spiraling.java" />
+        <option value="$PROJECT_DIR$/src/Q8_WhenWillYouGetThere/fileName.txt" />
+        <option value="$PROJECT_DIR$/src/Q10_GuitarSongs/fileName.txt" />
+        <option value="$PROJECT_DIR$/src/Q10_GuitarSongs/GuitarSongs_Backup.java" />
+        <option value="$PROJECT_DIR$/src/Q10_GuitarSongs/GuitarSongs.java" />
+        <option value="$PROJECT_DIR$/../../MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/Maze/Maze.java" />
+        <option value="$PROJECT_DIR$/src/Maze/Ceiling.java" />
+        <option value="$PROJECT_DIR$/src/Maze/MazeProgram.java" />
+        <option value="$PROJECT_DIR$/src/Maze/Test.java" />
+        <option value="$PROJECT_DIR$/src/Maze/maze.txt" />
+        <option value="$PROJECT_DIR$/src/Maze/maze1.txt" />
+        <option value="$PROJECT_DIR$/src/Maze/maze0.txt" />
+        <option value="$PROJECT_DIR$/src/Maze/MyMazeThing.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/LambdaTest.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Maze/Temp.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/BinaryToDecimal.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/ReverseString.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/SampleText" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/BestSciFiBooks.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/StackDemo.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q0_Template/FileTemplate.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/CarData.txt" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/CarData.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ListNode.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ListNodeTest.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/DoNows/December11.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunner2.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunnerError.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DoublyLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunner.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q1_ThreeSets/ThreeSets.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q2_LucasNumbers/LucasNumbers.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q3_JollySort/JollySorting.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q4_Diamond/Diamond.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q5_TicTacToe/TicTacToe.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q6_Calender/Calender.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q8_WhenWillYouGetThere/WhenWillYouGetThere.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q9_Spiraling/Spiraling.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q10_GuitarSongs/GuitarSongs.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Q7_IndexCards/IndexCards.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_1/Maze/MyMazeThing.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/WordReader.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Car_Data/CarData.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Word_Reader/WordReader.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Best_SciFi_Books/BestSciFiBooks.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarter_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="fontsize&#9;ACTION&#9;EditorIncreaseFontSize" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547571911525" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Quarter_2.DoublyLinkedList" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Maze" />
+      <recent name="$PROJECT_DIR$/src/Q10_GuitarSongs" />
+      <recent name="$PROJECT_DIR$/src/Q9_Spiraling" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Q8_WhenWillYouGetThere" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Q10_GuitarSongs" />
+      <recent name="Q8_WhenWillYouGetThere" />
+      <recent name="Q9_Spiraling" />
+      <recent name="Q4_Diamond" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Best_SciFi_Books" />
+      <recent name="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Word_Reader" />
+      <recent name="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Car_Data" />
+      <recent name="$PROJECT_DIR$/src/Maze" />
+      <recent name="$PROJECT_DIR$/src/Q8_WhenWillYouGetThere" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.December11">
+    <configuration name="BestSciFiBooks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.Stack_Problems.Best_SciFi_Books.BestSciFiBooks" />
+      <module name="DataStructuresAndGameDesignProblems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quarter_2.Stack_Problems.Best_SciFi_Books.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryToDecimal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.Stack_Problems.Binary_To_Decimal.BinaryToDecimal" />
+      <module name="DataStructuresAndGameDesignProblems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quarter_2.Stack_Problems.Binary_To_Decimal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="December11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.DoNows.December11" />
+      <module name="DataStructuresAndGameDesignProblems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quarter_2.DoNows.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.Stack_Problems.Reverse_String.ReverseString" />
+      <module name="DataStructuresAndGameDesignProblems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quarter_2.Stack_Problems.Reverse_String.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.Stack_Problems.Stack_Demo.StackDemo" />
+      <module name="DataStructuresAndGameDesignProblems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quarter_2.Stack_Problems.Stack_Demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BestSciFiBooks" />
+      <item itemvalue="Application.BinaryToDecimal" />
+      <item itemvalue="Application.December11" />
+      <item itemvalue="Application.ReverseString" />
+      <item itemvalue="Application.StackDemo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.December11" />
+        <item itemvalue="Application.BinaryToDecimal" />
+        <item itemvalue="Application.BestSciFiBooks" />
+        <item itemvalue="Application.ReverseString" />
+        <item itemvalue="Application.StackDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="452d0187-38db-4ec3-a0dd-8420419d069a" name="Default Changelist" comment="" />
+      <created>1537488658376</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537488658376</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Reworked Key Direction part">
+      <created>1542323261849</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542323261849</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Finishing Touches">
+      <created>1542403772621</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542403772622</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Almost Working Foreshortening">
+      <created>1542571984843</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542571984843</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Finished Maze">
+      <created>1542575474579</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542575474579</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26680973" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3133758" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.510828" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3299363" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32356688" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reworked Key Direction part" />
+    <MESSAGE value="Finishing Touches" />
+    <MESSAGE value="Almost Working Foreshortening" />
+    <MESSAGE value="Finished Maze" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Maze" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="root" language="JAVA" />
+        <watch expression="end" language="JAVA" />
+        <watch expression="size" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>5</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>3</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i == 2</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i == 3</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i ==3</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="watch">
+      <expression>
+        <expression-string>size</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>root</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>end</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>wallPoints</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parsed.get(0).get(1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parsed.get(0).get(0)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parsed.get(i).size()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parsed.get(i).get(2).size()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>else                              temp.add('*')</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>yPos</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Maze/maze0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/LambdaTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Maze/Temp.java" />
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Best_SciFi_Books/100BestSciFi21stCentury.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="149" column="25" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/BufferedWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="245" column="30" selection-start-line="245" selection-start-column="30" selection-end-line="245" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8367">
+          <caret line="622" column="26" selection-start-line="622" selection-start-column="26" selection-end-line="622" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="138" column="39" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="1462" column="22" selection-start-line="1462" selection-start-column="22" selection-end-line="1462" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ewf.java" />
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ListNode.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="314" column="7" lean-forward="true" selection-start-line="314" selection-start-column="7" selection-end-line="314" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ListNodeTest.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="203" column="17" selection-start-line="203" selection-start-column="17" selection-end-line="203" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Cloneable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1123">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="219" column="44" lean-forward="true" selection-start-line="219" selection-start-column="44" selection-end-line="219" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="137" column="38" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="403" column="8" selection-start-line="403" selection-start-column="8" selection-end-line="403" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/AbstractSequentialList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="237" column="21" lean-forward="true" selection-start-line="237" selection-start-column="21" selection-end-line="237" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="974" column="10" selection-start-line="974" selection-start-column="10" selection-end-line="974" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q0_Template/fileName.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q0_Template/FileTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q1_ThreeSets/fileName.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q1_ThreeSets/ThreeSets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q2_LucasNumbers/LucasNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q3_JollySort/JollySorting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q4_Diamond/Diamond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q5_TicTacToe/TicTacToe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q6_Calender/Calender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q8_WhenWillYouGetThere/WhenWillYouGetThere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q9_Spiraling/Spiraling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q10_GuitarSongs/GuitarSongs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q7_IndexCards/IndexCards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Maze/MyMazeThing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunner2.java" />
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="144" column="112" selection-start-line="144" selection-start-column="112" selection-end-line="144" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunnerError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DoublyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#302#303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Word_Reader/SampleText.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="902" selection-start-column="902" selection-end-column="902" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Car_Data/CarData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Car_Data/CarData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Stack_Demo/StackDemo.java" />
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Word_Reader/WordReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Best_SciFi_Books/BestSciFiBooks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="76" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Reverse_String/ReverseString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Binary_To_Decimal/BinaryToDecimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoNows/December11.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Set_Problems/TreeSet.java" />
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>DataStructuresAndGameDesignProblems</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
