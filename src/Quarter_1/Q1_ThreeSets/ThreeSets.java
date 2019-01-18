@@ -33,7 +33,7 @@ public class ThreeSets {
 				format = format.replace('[', '{');
 				format = format.replace(']', '}');
 
-				System.out.println("Set " + setCount + " intersection = " + format);
+				System.out.println("MySet " + setCount + " intersection = " + format);
 				setCount++;
 			}
 		}
