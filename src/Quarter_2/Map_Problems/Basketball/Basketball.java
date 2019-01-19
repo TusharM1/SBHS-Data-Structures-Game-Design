@@ -12,7 +12,7 @@ public class Basketball {
 
         HashMap<String, HashSet<BasketballPlayer>> hashMap = new HashMap<>();
         TreeMap<String, TreeSet<BasketballPlayer>> treeMap = new TreeMap<>();
-        File file = new File("src/Quarter_2/BasketballPlayerList.txt");
+        File file = new File("src/Quarter_2/Map_Problems/Basketball/BasketballPlayerList.txt");
         try {
             BufferedReader input = new BufferedReader(new FileReader(file));
             String text;
@@ -61,17 +61,15 @@ public class Basketball {
             System.out.println("HashMap");
             for (String key: hashMap.keySet()) {
                 System.out.println(key);
-                // Would use for-each loop, but will use iterator instead
                 Iterator iterator = hashMap.get(key).iterator();
                 while (iterator.hasNext())
                     System.out.println("\t" + iterator.next());
             }
-            System.out.println();
+            System.out.println("\n");
 
             System.out.println("TreeMap");
             for (String key: treeMap.keySet()) {
                 System.out.println(key);
-                // Would use for-each loop, but will use iterator instead
                 Iterator iterator = treeMap.get(key).iterator();
                 while (iterator.hasNext())
                     System.out.println("\t" + iterator.next());
@@ -106,25 +104,25 @@ class BasketballPlayer implements Comparable<BasketballPlayer> {
     public int compareTo(BasketballPlayer o) {
         int result = this.position.compareTo(o.getPosition());
         if (result != 0)
-            return -result;
+            return result;
         result = this.height.compareTo(o.getHeight());
         if (result != 0)
-            return -result;
+            return result;
         result = Integer.compare(this.weight, o.getWeight());
         if (result != 0)
-            return -result;
+            return result;
         result = Integer.compare(this.uniformNumber, o.getUniformNumber());
         if (result != 0)
-            return -result;
+            return result;
         result = Integer.compare(this.salary, o.getSalary());
         if (result != 0)
-            return -result;
+            return result;
         result = this.university.compareTo(o.getUniversity());
         if (result != 0)
-            return -result;
+            return result;
         result = Integer.compare(this.age, o.getAge());
         if (result != 0)
-            return -result;
+            return result;
         return 0;
     }
 
