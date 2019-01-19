@@ -1,9 +1,9 @@
-package Quarter_2;
+package Quarter_2.Set_Problems;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class MySet {
+public class IntersectionUnionSet {
 
     public static void main(String[] args) {
 
@@ -36,6 +36,7 @@ public class MySet {
         for (int i = 1; i < arrayList.size(); i++)
             evenUnionSet = evenUnion(evenUnionSet, arrayList.get(i));
         System.out.println(evenUnionSet);
+
     }
 
     static HashSet<Integer> intersection(HashSet<Integer> setA, HashSet<Integer> setB){

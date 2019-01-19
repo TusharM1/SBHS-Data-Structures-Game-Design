@@ -1,4 +1,4 @@
-package Quarter_2;
+package Quarter_2.Map_Problems.Basketball;
 
 import java.io.BufferedReader;
 import java.io.File;
