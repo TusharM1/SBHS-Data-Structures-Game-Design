@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="452d0187-38db-4ec3-a0dd-8420419d069a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Quarter_2/Basketball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Quarter_2/Bowler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Quarter_2/MySet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_1/Q1_ThreeSets/ThreeSets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_1/Q1_ThreeSets/ThreeSets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quarter_2/MySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_2/MySet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quarter_2/Basketball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-402">
-              <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+            <state relative-caret-position="-4">
+              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,10 +30,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quarter_2/Bowler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="347">
               <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -46,26 +43,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quarter_2/BowlingData.txt">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="17" />
+            <state relative-caret-position="300">
+              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q0_Template/FileTemplate.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_2/MySet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" selection-start-line="10" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="720">
+              <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quarter_2/BasketballPlayerList.txt">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -115,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Q10_GuitarSongs/GuitarSongs_Backup.java" />
         <option value="$PROJECT_DIR$/src/Q10_GuitarSongs/GuitarSongs.java" />
         <option value="$PROJECT_DIR$/../../MainActivity.java" />
         <option value="$PROJECT_DIR$/src/Maze/Maze.java" />
@@ -158,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Car_Data/CarData.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Word_Reader/WordReader.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Best_SciFi_Books/BestSciFiBooks.java" />
-        <option value="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/HashMapExample.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/HashMapNumCounter.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/BasketballPlayer.java" />
@@ -166,11 +159,13 @@
         <option value="$PROJECT_DIR$/src/Quarter_2/Bowler.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Basketball.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Set.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/MySet.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="128" />
+    <option name="x" value="27" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -215,7 +210,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="fontsize&#9;ACTION&#9;EditorIncreaseFontSize" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547824650842" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547916477775" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -259,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Bowler">
+  <component name="RunManager" selected="Application.MySet">
     <configuration name="Basketball" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Quarter_2.Basketball" />
       <module name="DataStructuresAndGameDesignProblems" />
@@ -312,8 +307,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HashMapNumCounter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_2.HashMapNumCounter" />
+    <configuration name="MySet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.MySet" />
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
@@ -327,11 +322,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MySet" />
         <item itemvalue="Application.Bowler" />
         <item itemvalue="Application.HashMapExample" />
         <item itemvalue="Application.Basketball" />
         <item itemvalue="Application.CarData" />
-        <item itemvalue="Application.HashMapNumCounter" />
       </list>
     </recent_temporary>
   </component>
@@ -388,14 +383,20 @@
       <option name="project" value="LOCAL" />
       <updated>1547750203518</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="New Hash and Tree Problems">
+      <created>1547824703060</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1547824703060</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="720" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34070796" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21530758" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -434,7 +435,8 @@
     <MESSAGE value="Almost Working Foreshortening" />
     <MESSAGE value="Finished Maze" />
     <MESSAGE value="I don't really know what is this" />
-    <option name="LAST_COMMIT_MESSAGE" value="I don't really know what is this" />
+    <MESSAGE value="New Hash and Tree Problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Hash and Tree Problems" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -527,13 +529,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="138" column="39" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ewf.java" />
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ListNode.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ArrayList.java">
@@ -765,13 +760,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/Set_Problems/TreeSet.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Car_Data/CarData.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -813,11 +801,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/Basketball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-402">
-          <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+        <state relative-caret-position="-4">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/BasketballPlayerList.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q0_Template/FileTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" selection-start-line="10" selection-end-line="19" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -828,27 +826,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q0_Template/FileTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Bowler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" selection-start-line="10" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="347">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/BasketballPlayerList.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/MySet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Bowler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="720">
+          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

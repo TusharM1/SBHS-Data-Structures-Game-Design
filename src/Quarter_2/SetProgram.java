@@ -9,7 +9,7 @@ public class SetProgram
 	public SetProgram()
 	{
 		TreeSet<Integer> set;
-        set = new TreeSet<Integer>();
+        set = new TreeSet<>();
         int count=0;
 		while(count<20)
 		{
