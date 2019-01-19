@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="452d0187-38db-4ec3-a0dd-8420419d069a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Quarter_2/RandomIntegers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_2/MySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_2/MySet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructuresAndGameDesignProblems/Quarter_1/Q1_ThreeSets/ThreeSets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructuresAndGameDesignProblems/Quarter_1/Q1_ThreeSets/ThreeSets.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,23 +42,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_2/RandomIntegers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state relative-caret-position="87">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Quarter_2/MySet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="598">
               <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_2/random_integers.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14985">
+              <caret line="999" column="1" selection-start-line="999" selection-start-column="1" selection-end-line="999" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -110,8 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Q10_GuitarSongs/GuitarSongs.java" />
-        <option value="$PROJECT_DIR$/../../MainActivity.java" />
         <option value="$PROJECT_DIR$/src/Maze/Maze.java" />
         <option value="$PROJECT_DIR$/src/Maze/Ceiling.java" />
         <option value="$PROJECT_DIR$/src/Maze/MazeProgram.java" />
@@ -161,6 +171,8 @@
         <option value="$PROJECT_DIR$/src/Quarter_2/Set.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/SetProgram.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/MySet.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/random_integers.txt" />
+        <option value="$PROJECT_DIR$/src/Quarter_2/RandomIntegers.java" />
       </list>
     </option>
   </component>
@@ -194,6 +206,19 @@
               <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarter_1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Quarter_1" type="462c0819:PsiDirectoryNode" />
+              <item name="Q0_Template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Quarter_2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -210,7 +235,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="fontsize&#9;ACTION&#9;EditorIncreaseFontSize" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547916477775" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547920033493" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -254,7 +279,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MySet">
+  <component name="RunManager" selected="Application.RandomIntegers">
     <configuration name="Basketball" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Quarter_2.Basketball" />
       <module name="DataStructuresAndGameDesignProblems" />
@@ -274,19 +299,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Quarter_2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_2.Queue_Problems.Car_Data.CarData" />
-      <module name="DataStructuresAndGameDesignProblems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Quarter_2.Queue_Problems.Car_Data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -320,13 +332,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RandomIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.RandomIntegers" />
+      <module name="DataStructuresAndGameDesignProblems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quarter_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RandomIntegers" />
         <item itemvalue="Application.MySet" />
         <item itemvalue="Application.Bowler" />
         <item itemvalue="Application.HashMapExample" />
         <item itemvalue="Application.Basketball" />
-        <item itemvalue="Application.CarData" />
       </list>
     </recent_temporary>
   </component>
@@ -390,11 +415,19 @@
       <option name="project" value="LOCAL" />
       <updated>1547824703060</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="HashSet">
+      <created>1547916706367</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547916706368</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21530758" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -436,7 +469,8 @@
     <MESSAGE value="Finished Maze" />
     <MESSAGE value="I don't really know what is this" />
     <MESSAGE value="New Hash and Tree Problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Hash and Tree Problems" />
+    <MESSAGE value="HashSet" />
+    <option name="LAST_COMMIT_MESSAGE" value="HashSet" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -529,8 +563,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ewf.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/ListNode.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -812,17 +844,41 @@
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/BasketballPlayerList.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q0_Template/FileTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" selection-start-line="10" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quarter_2/BowlingData.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="17" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/random_integers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14985">
+          <caret line="999" column="1" selection-start-line="999" selection-start-column="1" selection-end-line="999" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/MySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -836,24 +892,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/SetProgram.java">
+    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Q0_Template/FileTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        <state relative-caret-position="90">
+          <caret line="9" selection-start-line="9" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/HashSet.java">
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/RandomIntegers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/MySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="87">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
