@@ -1,4 +1,4 @@
-package Quarter_2;
+package Quarter_2.Map_Problems;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,7 +40,7 @@ public class HashMapExample {
 		System.out.println("Iterate through the values of the HashMap");
 		int sum = 0;
 		while (it3.hasNext()) {
-			for (Integer num : map.get((it3.next()))) {
+			for (Integer num : map.get(it3.next())) {
 				System.out.println(num);
 				sum += num;
 			}

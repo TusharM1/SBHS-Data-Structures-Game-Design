@@ -1,8 +1,6 @@
-package Quarter_2;
+package Quarter_2.Set_Problems;
 
 import java.util.TreeSet;
-import java.util.HashSet;
-import java.util.ArrayList;
 import java.util.Iterator;
 public class SetProgram
 {

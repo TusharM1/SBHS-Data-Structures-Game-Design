@@ -1,4 +1,4 @@
-package Quarter_2;
+package Quarter_2.Map_Problems;
 
 import java.util.HashMap;
 
