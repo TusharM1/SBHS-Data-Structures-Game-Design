@@ -204,8 +204,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="614" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -250,7 +249,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="fontsize&#9;ACTION&#9;EditorIncreaseFontSize" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547920585083" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547921170352" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -300,7 +299,7 @@
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quarter_2.Set_Problems.*" />
+          <option name="PATTERN" value="Quarter_2.Set_Problems.Intersection_Union.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -313,7 +312,7 @@
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quarter_2.Set_Problems.*" />
+          <option name="PATTERN" value="Quarter_2.Set_Problems.Intersection_Union.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -322,11 +321,11 @@
       </method>
     </configuration>
     <configuration name="HashMapExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_2.HashMapExample" />
+      <option name="MAIN_CLASS_NAME" value="Quarter_2.Map_Problems.HashMapExample" />
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quarter_2.Set_Problems.*" />
+          <option name="PATTERN" value="Quarter_2.Set_Problems.Intersection_Union.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -339,7 +338,7 @@
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quarter_2.Set_Problems.*" />
+          <option name="PATTERN" value="Quarter_2.Set_Problems.Intersection_Union.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -352,7 +351,7 @@
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quarter_2.Set_Problems.*" />
+          <option name="PATTERN" value="Quarter_2.Set_Problems.Intersection_Union.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

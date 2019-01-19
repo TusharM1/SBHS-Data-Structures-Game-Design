@@ -1,4 +1,4 @@
-package Quarter_2.Set_Problems;
+package Quarter_2.Set_Problems.Intersection_Union;
 
 import java.util.ArrayList;
 import java.util.HashSet;
