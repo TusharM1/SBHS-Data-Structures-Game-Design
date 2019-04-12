@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="452d0187-38db-4ec3-a0dd-8420419d069a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Quarter_3/GUI/MenuThing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Quarter_3/ReviewTask/ReviewTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quarter_3/Tree/Tree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quarter_3/Tree/TreeRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_3/JuliaSets/InterviewSim.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_3/JuliaSets/OldJuliaSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_3/Minesweeper/Minesweeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_3/Minesweeper/Minesweeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Quarter_3/GUI/MenuThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_3/GUI/MenuThing.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,29 +25,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Quarter_3/GUI/MenuThing.java">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_3/Tree/Tree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2955">
-              <caret line="200" column="35" selection-start-line="200" selection-start-column="35" selection-end-line="200" selection-end-column="35" />
+            <state relative-caret-position="725">
+              <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7507#7508#0" expanded="true" />
-                <element signature="e#7529#7530#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#728#729#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Quarter_3/Minesweeper/Minesweeper.java">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_3/Tree/TreeRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              <folding>
-                <element signature="e#4982#5488#0" expanded="true" />
-                <element signature="e#5487#5488#0" expanded="true" />
-                <element signature="e#10177#10178#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="146">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -66,8 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>arc</find>
-      <find>John Scalzi</find>
       <find>Hugh Howey</find>
       <find>out</find>
       <find>iterator</find>
@@ -96,6 +86,8 @@
       <find>reset</find>
       <find>spaces</find>
       <find>rows</find>
+      <find>value</find>
+      <find>.getValue().toString();</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;\t&quot;</replace>
@@ -107,6 +99,8 @@
       <replace>}</replace>
       <replace>cats.get($1)</replace>
       <replace>(int) (Math.random() * 256)</replace>
+      <replace>.toString()</replace>
+      <replace>.toString();</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -115,8 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunner2.java" />
-        <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunnerError.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DoublyLinkedList.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DLLRunner.java" />
         <option value="$PROJECT_DIR$/src/Quarter_1/Q1_ThreeSets/ThreeSets.java" />
@@ -164,8 +156,10 @@
         <option value="$PROJECT_DIR$/src/Quarter_3/Minesweeper/MinesweeperTest.java" />
         <option value="$PROJECT_DIR$/src/Quarter_3/ReviewTask/Review.java" />
         <option value="$PROJECT_DIR$/src/Quarter_3/ReviewTask/ReviewTask.java" />
-        <option value="$PROJECT_DIR$/src/Quarter_3/GUI/MenuThing.java" />
         <option value="$PROJECT_DIR$/src/Quarter_3/Minesweeper/Minesweeper.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_3/GUI/MenuThing.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_3/Tree/Tree.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_3/Tree/TreeRunner.java" />
       </list>
     </option>
   </component>
@@ -182,8 +176,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,36 +190,19 @@
             </path>
             <path>
               <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Quarter_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Quarter_3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Quarter_3" type="462c0819:PsiDirectoryNode" />
-              <item name="Minesweeper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="fontsize&#9;ACTION&#9;EditorIncreaseFontSize" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553706809307" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553876112643" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -273,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Minesweeper">
+  <component name="RunManager" selected="Application.TreeRunner">
     <configuration name="MenuThing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Quarter_3.GUI.MenuThing" />
       <module name="DataStructuresAndGameDesignProblems" />
@@ -326,12 +301,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReviewTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_3.ReviewTask.ReviewTask" />
+    <configuration name="TreeRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_3.Tree.TreeRunner" />
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Quarter_3.ReviewTask.*" />
+          <option name="PATTERN" value="Quarter_3.Tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -341,11 +316,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TreeRunner" />
         <item itemvalue="Application.Minesweeper" />
-        <item itemvalue="Application.MyMazeThing" />
         <item itemvalue="Application.MenuThing" />
+        <item itemvalue="Application.MyMazeThing" />
         <item itemvalue="Application.Review" />
-        <item itemvalue="Application.ReviewTask" />
       </list>
     </recent_temporary>
   </component>
@@ -472,14 +447,21 @@
       <option name="project" value="LOCAL" />
       <updated>1550766754625</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Minesweeper">
+      <created>1553706953160</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1553706953160</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2274678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23032904" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -488,7 +470,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2700637" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2700637" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.510828" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -525,7 +507,8 @@
     <MESSAGE value="Edited Basketball" />
     <MESSAGE value="Finished Codewars assignments" />
     <MESSAGE value="JuliaSets" />
-    <option name="LAST_COMMIT_MESSAGE" value="JuliaSets" />
+    <MESSAGE value="Minesweeper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minesweeper" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -629,58 +612,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/IntStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="714" column="12" selection-start-line="714" selection-start-column="12" selection-end-line="714" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/function/IntPredicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="657" column="22" selection-start-line="657" selection-start-column="22" selection-end-line="657" selection-end-column="22" />
-          <folding>
-            <element signature="e#32100#32101#0" expanded="true" />
-            <element signature="e#32165#32166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Map_Problems/Basketball/Basketball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="161" column="1" selection-start-line="161" selection-start-column="1" selection-end-line="161" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/Map_Problems/Bowler/Bowler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="528" column="30" selection-start-line="528" selection-start-column="30" selection-end-line="528" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -746,17 +677,6 @@
           <folding>
             <element signature="e#7987#7988#0" expanded="true" />
             <element signature="e#8035#8036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DoublyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -934,17 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="665" column="9" selection-start-line="665" selection-start-column="9" selection-end-line="665" selection-end-column="9" />
-          <folding>
-            <element signature="e#56709#56710#0" expanded="true" />
-            <element signature="e#56753#56754#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Iterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -972,37 +881,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_3/GUI/MenuThing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="200" column="35" selection-start-line="200" selection-start-column="35" selection-end-line="200" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7507#7508#0" expanded="true" />
-            <element signature="e#7529#7530#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_3/Minesweeper/MinesweeperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="95" selection-start-line="95" selection-end-line="96" selection-end-column="124" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_3/Minesweeper/MinesweeperTest.java" />
     <entry file="file://$PROJECT_DIR$/src/Quarter_3/Minesweeper/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding>
             <element signature="e#4982#5488#0" expanded="true" />
             <element signature="e#5487#5488#0" expanded="true" />
             <element signature="e#10177#10178#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_3/GUI/MenuThing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7599#7600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DoublyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="10" />
+          <folding>
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="7493" column="28" selection-start-line="7493" selection-start-column="28" selection-end-line="7493" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="1158" column="31" selection-start-line="1158" selection-start-column="31" selection-end-line="1158" selection-end-column="31" />
+          <folding>
+            <element signature="e#55675#55676#0" expanded="true" />
+            <element signature="e#55761#55762#0" expanded="true" />
+            <element signature="e#56709#56710#0" expanded="true" />
+            <element signature="e#56753#56754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/OptionalDouble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/IntStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4324">
+          <caret line="1061" column="58" selection-start-line="1061" selection-start-column="53" selection-end-line="1061" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="1870" column="18" selection-start-line="1870" selection-start-column="18" selection-end-line="1870" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_3/Tree/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_3/Tree/TreeRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>

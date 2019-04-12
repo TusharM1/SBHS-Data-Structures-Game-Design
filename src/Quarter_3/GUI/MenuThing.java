@@ -66,6 +66,7 @@ public class MenuThing extends JPanel implements ActionListener {
 		menuBar = new JMenuBar();
 
 		JMenu menu;
+		int[] fontSizes = {12, 24, 36};
 
 		menu = new JMenu("Font");
 		String[] fonts = {"Times New Roman", "Arial", "Cambria"};
@@ -93,9 +94,9 @@ public class MenuThing extends JPanel implements ActionListener {
 		menuBar.add(menu);
 
 		menu = new JMenu("Font Size");
-		int[] fontSizes = {12, 24, 36};
 		for (int i = 0; i < 3; i++) {
 			JMenuItem menuItem = new JMenuItem(String.valueOf(fontSizes[i]));
+			menuItem.setFont(new Font(currentFont, Font.PLAIN, fontSizes[i]));
 			final int fontIndex = i;
 			JMenu finalMenu = menu;
 			menuItem.addActionListener(e -> {
