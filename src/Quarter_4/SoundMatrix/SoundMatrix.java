@@ -99,15 +99,15 @@ public class SoundMatrix extends JPanel {
         songMenu.add(menuBar);
 
         song1.addActionListener(e -> {
-            loadSong("twinkle_twinkle_little_star.txt");
+            loadSong("Songs/twinkle_twinkle_little_star.txt");
         });
 
         song2.addActionListener(e -> {
-            loadSong("mary_had_a_little_lamb.txt");
+            loadSong("Songs/mary_had_a_little_lamb.txt");
         });
 
         song3.addActionListener(e -> {
-            loadSong("london_bridge_is_falling_down.txt");
+            loadSong("Songs/london_bridge_is_falling_down.txt");
         });
 
         // CLEAR ALL SONGS
@@ -168,7 +168,7 @@ public class SoundMatrix extends JPanel {
                         string.append(jToggleButton.isSelected() ? 1 : 0);
                     strings.add(string.toString().replaceAll("[\\[\\],]", ""));
                 }
-                Files.write(Paths.get("src/Quarter_4/SoundMatrix/saved.txt"), strings, Charset.defaultCharset());
+                Files.write(Paths.get("src/Quarter_4/SoundMatrix/Songs/saved.txt"), strings, Charset.defaultCharset());
             } catch (Exception exception) {
                 exception.printStackTrace();
             }
@@ -176,7 +176,7 @@ public class SoundMatrix extends JPanel {
 
         // READ SONG FROM FILE
         load.addActionListener(e -> {
-            loadSong("saved.txt");
+            loadSong("Songs/saved.txt");
         });
 
         play.addActionListener(e -> {
