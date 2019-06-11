@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="452d0187-38db-4ec3-a0dd-8420419d069a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quarter_4/SideScroller/BadGuy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quarter_4/SideScroller/Block.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quarter_4/SideScroller/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quarter_4/SideScroller/Hero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quarter_4/SideScroller/MovingBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Quarter_4/SideScroller/layout.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/SoundMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/SoundMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/london_bridge_is_falling_down.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/Songs/london_bridge_is_falling_down.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/mary_had_a_little_lamb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/Songs/mary_had_a_little_lamb.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/saved.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/Songs/saved.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/twinkle_twinkle_little_star.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/Songs/twinkle_twinkle_little_star.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructuresAndGameDesignProblems.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructuresAndGameDesignProblems.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,15 +35,48 @@
     <option name="HIDE_WARNINGS" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Quarter_4/SoundMatrix/SoundMatrix.java">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="170" column="71" selection-start-line="170" selection-start-column="71" selection-end-line="170" selection-end-column="71" />
+            <state relative-caret-position="624">
+              <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/Hero.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/Block.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/layout.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -58,9 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>a\[(\d)\]</find>
-      <find>collect</find>
-      <find>merge</find>
       <find>Jul</find>
       <find>Scroll</find>
       <find>equals</find>
@@ -88,6 +120,9 @@
       <find>curren</find>
       <find>250</find>
       <find>codewars</find>
+      <find>main</find>
+      <find>launch</find>
+      <find>group.getChildren().add(hero);</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;\t&quot;</replace>
@@ -109,10 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Quarter_1/Q7_IndexCards/IndexCards.java" />
-        <option value="$PROJECT_DIR$/src/Quarter_1/Maze/MyMazeThing.java" />
-        <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/WordReader.java" />
-        <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Car_Data/CarData.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Queue_Problems/Word_Reader/WordReader.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/Best_SciFi_Books/BestSciFiBooks.java" />
         <option value="$PROJECT_DIR$/src/Quarter_2/Stack_Problems/BasketballPlayer.java" />
@@ -160,12 +191,17 @@
         <option value="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/Test.java" />
         <option value="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/CodeWars.java" />
         <option value="$PROJECT_DIR$/src/Quarter_4/SoundMatrix/SoundMatrix.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_4/SideScroller/Block.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_4/SideScroller/layout.txt" />
+        <option value="$PROJECT_DIR$/src/Quarter_4/SideScroller/Hero.java" />
+        <option value="$PROJECT_DIR$/src/Quarter_4/SideScroller/Game.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="720" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="720" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -178,6 +214,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,18 +231,6 @@
               <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Quarter_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Quarter_3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Quarter_4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -213,7 +238,7 @@
               <item name="DataStructuresAndGameDesignProblems" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Quarter_4" type="462c0819:PsiDirectoryNode" />
-              <item name="SoundMatrix" type="462c0819:PsiDirectoryNode" />
+              <item name="SideScroller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DataStructuresAndGameDesign" type="b2602c69:ProjectViewProjectNode" />
@@ -223,7 +248,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,11 +257,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555086617293" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Quarter_4/SoundMatrix" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -277,13 +301,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SoundMatrix">
+  <component name="RunManager" selected="Application.Game">
     <configuration name="CodeWars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Quarter_4.SoundMatrix.CodeWars" />
       <module name="DataStructuresAndGameDesignProblems" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Quarter_4.SoundMatrix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Quarter_4.SideScroller.Game" />
+      <module name="DataStructuresAndGameDesignProblems" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quarter_4.SideScroller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -343,26 +380,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="soundMatrix1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Quarter_4.SoundMatrix.soundMatrix1" />
-      <module name="DataStructuresAndGameDesignProblems" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Quarter_4.SoundMatrix.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Game" />
         <item itemvalue="Application.SoundMatrix" />
         <item itemvalue="Application.CodeWars" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.SoundTemplate" />
-        <item itemvalue="Application.soundMatrix1" />
       </list>
     </recent_temporary>
   </component>
@@ -391,7 +415,10 @@
       <workItem from="1559137375333" duration="598000" />
       <workItem from="1559138316538" duration="1000" />
       <workItem from="1559216945505" duration="6387000" />
-      <workItem from="1559317893778" duration="12818000" />
+      <workItem from="1559317893778" duration="13491000" />
+      <workItem from="1559667419804" duration="66000" />
+      <workItem from="1560173949904" duration="612000" />
+      <workItem from="1560258487423" duration="11838000" />
     </task>
     <task id="LOCAL-00001" summary="Reworked Key Direction part">
       <created>1542323261849</created>
@@ -547,17 +574,24 @@
       <option name="project" value="LOCAL" />
       <updated>1558534749972</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Cleaned up folder structure">
+      <created>1559656070332</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1559656070332</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68308000" />
+    <option name="totallyTimeSpent" value="81497000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24391988" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14806867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -613,15 +647,13 @@
     <MESSAGE value="TreeSet" />
     <MESSAGE value="Sound Matrix WIP" />
     <MESSAGE value="Sound Matrix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sound Matrix" />
+    <MESSAGE value="Cleaned up folder structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up folder structure" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Application">
-        <watch expression="(result % 1) * 60" language="JAVA" />
-        <watch expression="result / 60" language="JAVA" />
-        <watch expression="1024 % 60" language="JAVA" />
-        <watch expression="((double) g) / (v2 - v1) * 3600" language="JAVA" />
+        <watch expression="width / blockSize" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -675,6 +707,11 @@
     </expressions>
     <expressions id="watch">
       <expression>
+        <expression-string>width / blockSize</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>((double) g) / (v2 - v1) * 3600</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -719,11 +756,6 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>(((result % 1) * 60) % 1) * 60</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
@@ -734,65 +766,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Quarter_3/JuliaSets/JuliaSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="105" column="34" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3839#3840#0" expanded="true" />
-            <element signature="e#3860#3861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JMenuBar.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JMenu.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Math.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Iterator.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quarter_3/ReviewTask/Review.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quarter_3/ReviewTask/ReviewTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../rps.py" />
-    <entry file="file://$PROJECT_DIR$/src/Quarter_1/Maze/MyMazeThing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_3/Minesweeper/MinesweeperTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/Quarter_3/Minesweeper/Minesweeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding>
-            <element signature="e#4982#5488#0" expanded="true" />
-            <element signature="e#5487#5488#0" expanded="true" />
-            <element signature="e#10177#10178#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_2/DoublyLinkedList/DoublyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="10" />
-          <folding>
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Character.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/Stream.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/OptionalDouble.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/IntStream.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java" />
     <entry file="file://$PROJECT_DIR$/src/Quarter_3/Tree/Tree.java">
@@ -990,22 +963,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SoundMatrix/CodeWars.java">
+    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SoundMatrix/CodeWars.java" />
+    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SoundMatrix/SoundMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="708">
+          <caret line="170" column="71" selection-start-line="170" selection-start-column="71" selection-end-line="170" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9006#9007#0" expanded="true" />
-            <element signature="e#9036#9037#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SoundMatrix/SoundMatrix.java">
+    <entry file="jar://$PROJECT_DIR$/../Libraries/javafx-sdk-12.0.1/lib/javafx.graphics.jar!/javafx/scene/Scene.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="170" column="71" selection-start-line="170" selection-start-column="71" selection-end-line="170" selection-end-column="71" />
+        <state relative-caret-position="151">
+          <caret line="258" column="11" selection-start-line="258" selection-start-column="11" selection-end-line="258" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Libraries/javafx-sdk-12.0.1/lib/src.zip!/javafx.graphics/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="234" column="11" selection-start-line="234" selection-start-column="11" selection-end-line="234" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Libraries/javafx-sdk-12.0.1/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="331" column="16" selection-start-line="331" selection-start-column="16" selection-end-line="331" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/MovingBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/BadGuy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Libraries/javafx-sdk-12.0.1/lib/src.zip!/javafx.graphics/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="397" column="22" selection-start-line="397" selection-start-column="22" selection-end-line="397" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Libraries/javafx-sdk-12.0.1/lib/src.zip!/javafx.graphics/javafx/scene/Parent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="78" column="39" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Libraries/javafx-sdk-12.0.1/lib/src.zip!/javafx.graphics/javafx/scene/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="520" column="9" selection-start-line="520" selection-start-column="9" selection-end-line="520" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/layout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Libraries/javafx-sdk-12.0.1/lib/src.zip!/javafx.graphics/javafx/scene/shape/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/Hero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Libraries/javafx-sdk-12.0.1/lib/src.zip!/javafx.base/javafx/collections/ObservableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quarter_4/SideScroller/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1069,7 +1145,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1077,6 +1152,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
