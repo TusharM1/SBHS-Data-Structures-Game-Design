@@ -56,6 +56,7 @@ public class Game extends Application {
 
 //    boolean update = false;
 
+
     @Override
     public void start(Stage stage) {
         group = new Group();
@@ -120,56 +121,241 @@ public class Game extends Application {
         @Override
         public void handle(long now) {
 
-            System.out.println(hero.getX());
+//            System.out.println(hero.getX());
 
 //            System.out.println(playerPositionX / blockSize + " " + (int) hero.getY() / blockSize);
 //            if (hero.getX() / blockSize < blocks[0].length)
 //            System.out.println(hero.getX() + " " + playerPositionX);
 
-            for (int i = 0; i < Math.abs(velocityX); i++) {
-//                playerPositionX = (int) hero.getX();
-                Block block;
-                if (playerPositionX / blockSize != 0) {
-                    block = blocks[(int) hero.getY() / blockSize][playerPositionX / blockSize - 1];
-                    if (block != null && ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0))) {
-//                        block.setFill(Color.BLUE);
-//                        velocityX = 0;
-//                        System.out.println("a");
-                        break;
-                    }
-//                    else if (block != null) {
-////                        System.out.println((block.getX() + blockSize) + " " + hero.getX());
-//                    }
-//                        System.out.println(((int) hero.getY() / blockSize) + " " + (playerPositionX / blockSize - 1) + " ");
-//                    }
-                    if ((int) hero.getY() / blockSize < blocks.length - 1 && hero.getY() % blockSize != 0) {
-                        block = blocks[(int) hero.getY() / blockSize + 1][playerPositionX / blockSize - 1];
-                        if (block != null && ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0))) {
-//                            block.setFill(Color.BLUE);
-//                            velocityX = 0;
-                            System.out.println("b");
-                            break;
+
+
+
+
+
+
+
+//            for (int i = 0; i < blocks.length; i++) {
+//                if (playerPositionX > blocks[0].length * blockSize - (width - blockSize) / 2) {
+//                    if (playerPositionX / blockSize - 2 > 0)
+//                        System.out.print((blocks[i][playerPositionX / blockSize - 2] != null ? "X" : ".") + "\t");
+//                    else
+//                        System.out.print(" \t");
+//                    System.out.print((blocks[i][playerPositionX / blockSize - 1] != null ? "X" : ".") + "\t");
+//                    if (playerPositionX / blockSize < blocks[0].length)
+//                        System.out.print(blocks[i][playerPositionX / blockSize] != null ? "X" : ".");
+//                    else
+//                        System.out.print(" \t");
+//                    System.out.println();
+//                }
+//                else {
+//                    if (playerPositionX / blockSize > 0)
+//                        System.out.print((blocks[i][playerPositionX / blockSize - 1] != null ? "X" : ".") + "\t");
+//                    else
+//                        System.out.print(" \t");
+//                    System.out.print((blocks[i][playerPositionX / blockSize] != null ? "X" : ".") + "\t");
+//                    if (playerPositionX / blockSize + 1 < blocks[0].length)
+//                        System.out.print(blocks[i][playerPositionX / blockSize + 1] != null ? "X" : ".");
+//                    else
+//                        System.out.print(" \t");
+//                    System.out.println();
+//                }
+////                System.out.println((blocks[i][playerPositionX / blockSize - 1] != null ? "X" : ".") + "\t" + (blocks[i][playerPositionX / blockSize] != null ? "X" : ".") + "\t" + (blocks[i][playerPositionX / blockSize + 1] != null ? "X" : "."));
+//
+//            }
+//            System.out.println();
+
+//            System.out.println(playerPositionX);
+
+
+//            if (bitch == 1)
+//                System.out.println(hero.getX() + " " + playerPositionX + " " + screenPosition);
+
+            collisionX:
+            for (int j = 0; j < Math.abs(velocityX); j++) {
+
+                for (int i = 0; i < (hero.getY() > 0 ? 1 + (hero.getY() % blockSize != 0 ? 1 : 0) : 0); i++) {
+//            for (int i = 0; i < blocks.length; i++) {
+                    Block block;
+                    if (playerPositionX > blocks[0].length * blockSize - (width - blockSize) / 2) {
+                        if (playerPositionX / blockSize - 2 > 0) {
+                            block = blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize - 2];
+                            if (block != null) {
+                                System.out.print("X");
+                                block.setFill(Color.BLUE);
+                                if ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0)) {
+                                    System.out.print("a");
+                                    break collisionX;
+                                }
+                            }
+                            else
+                                System.out.print(".");
+                            System.out.print("\t");
+//                        System.out.print((block != null ? "X" : ".") + "\t");
                         }
-                    }
-                }
-                if (playerPositionX / blockSize < blocks[0].length - 1) {
-                    block = blocks[(int) hero.getY() / blockSize][playerPositionX / blockSize + 1];
-                    if (block != null && ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0))) {
-//                        block.setFill(Color.BLUE);
-//                        velocityX = 0;
-                        System.out.println("c");
-                        break;
-                    }
-                    if ((int) hero.getY() / blockSize < blocks.length - 1 && hero.getY() % blockSize != 0) {
-                        block = blocks[(int) hero.getY() / blockSize + 1][playerPositionX / blockSize + 1];
-                        if (block != null && ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0))) {
-//                            block.setFill(Color.BLUE);
-//                            velocityX = 0;
-                            System.out.println("d");
-                            break;
+                        else
+                            System.out.print(" \t");
+                        block = blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize - 1];
+//                    System.out.print((block != null ? "X" : ".") + "\t");
+                        if (block != null) {
+                            System.out.print("X");
+                            block.setFill(Color.BLUE);
+                            if ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0)) {
+                                System.out.print("b");
+                                break collisionX;
+                            }
                         }
+                        else
+                            System.out.print(".");
+                        System.out.print("\t");
+                        if (playerPositionX / blockSize < blocks[0].length) {
+                            block = blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize];
+//                        System.out.print(block != null ? "X" : ".");
+                            if (block != null) {
+                                System.out.print("X");
+                                block.setFill(Color.BLUE);
+                                if ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0)) {
+                                    System.out.print("c");
+                                    break collisionX;
+                                }
+                            }
+                            else
+                                System.out.print(".");
+                            System.out.print("\t");
+                        }
+                        else
+                            System.out.print(" \t");
+                        System.out.println();
                     }
+                    else {
+                        if (playerPositionX / blockSize > 0) {
+                            block = blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize - 1];
+//                        System.out.print((block != null ? "X" : ".") + "\t");
+                            if (block != null) {
+                                System.out.print("X");
+                                block.setFill(Color.BLUE);
+                                if ((hero.getX() + blockSize == block.getX() && velocityX >= 0) || (hero.getX() == block.getX() + blockSize && velocityX <= 0)) {
+                                    velocityX = 0;
+                                    System.out.print("d");
+                                    break collisionX;
+                                }
+                            }
+                            else
+                                System.out.print(".");
+                            System.out.print("\t");
+                        }
+                        else
+                            System.out.print(" \t");
+                        block = blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize];
+//                    System.out.print((block != null ? "X" : ".") + "\t");
+                        if (block != null) {
+                            System.out.print("X");
+                            block.setFill(Color.BLUE);
+                            if ((hero.getX() + blockSize == block.getX() && velocityX >= 0) || (hero.getX() == block.getX() + blockSize && velocityX <= 0)) {
+                                velocityX = 0;
+                                System.out.print("e");
+                                break collisionX;
+                            }
+                        }
+                        else
+                            System.out.print(".");
+                        System.out.print("\t");
+                        if (playerPositionX / blockSize + 1 < blocks[0].length) {
+                            block = blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize + 1];
+//                        System.out.print(block != null ? "X" : ".");
+                            if (block != null) {
+                                System.out.print("X");
+                                block.setFill(Color.BLUE);
+//                                System.out.print((hero.getX() + blockSize) + " " + block.getX() + " " + (velocityX > 0));
+                                System.out.print(hero.getX() + blockSize >= block.getX() && velocityX > 0);
+                                System.out.print(hero.getX() <= block.getX() + blockSize && velocityX < 0);
+                                if ((hero.getX() + blockSize >= block.getX() && velocityX > 0) || (hero.getX() <= block.getX() + blockSize && velocityX < 0)) {
+                                    velocityX = 0;
+//                                    System.out.println("here");
+                                    System.out.print("f");
+                                    break collisionX;
+                                }
+                            }
+                            else
+                                System.out.print(".");
+                            System.out.print("\t");
+                        }
+                        else
+                            System.out.print(" \t");
+                        System.out.println();
+                    }
+//                System.out.println((blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize - 1] != null ? "X" : ".") + "\t" + (blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize] != null ? "X" : ".") + "\t" + (blocks[(int) (hero.getY() / blockSize) + i][playerPositionX / blockSize + 1] != null ? "X" : "."));
+
                 }
+                System.out.println();
+
+
+//                Block block;
+
+//                for (int j = 0; j < blocks.length; j++) {
+//                    Block block;
+//                    if (playerPositionX > blocks[0].length * blockSize - (width - blockSize) / 2) {
+//                        block = blocks[j][playerPositionX / blockSize - 2];
+//                        if (block != null && (hero.getX() + blockSize == block.getX() || hero.getX() == block.getX() + blockSize))
+//                            block.setFill(Color.BLUE);
+//                        if (playerPositionX / blockSize < blocks[0].length) {
+//                            block = blocks[j][playerPositionX / blockSize];
+//                            if (block != null && (hero.getX() + blockSize == block.getX() || hero.getX() == block.getX() + blockSize))
+//                                block.setFill(Color.BLUE);
+//                        }
+//                    }
+//                    else {
+//                        if (playerPositionX / blockSize > 0) {
+//                            block = blocks[j][playerPositionX / blockSize - 1];
+//                            if (block != null && (hero.getX() + blockSize == block.getX() || hero.getX() == block.getX() + blockSize))
+//                                block.setFill(Color.BLUE);
+//                        }
+//                        if (playerPositionX / blockSize + 1 < blocks[0].length) {
+//                            block = blocks[j][playerPositionX / blockSize + 1];
+//                            if (block != null && (hero.getX() + blockSize == block.getX() || hero.getX() == block.getX() + blockSize))
+//                                block.setFill(Color.BLUE);
+//                        }
+//                    }
+//                }
+
+                // Check Left Side
+//                if (playerPositionX / blockSize != 0) {
+//                    // Left Top
+//                    block = blocks[(int) (hero.getY() / blockSize)][playerPositionX / blockSize - 1];
+////                    System.out.println((int) (hero.getY() / blockSize) + " " + (playerPositionX / blockSize - 1));
+//                    if (block != null && hero.getX() == block.getX() + blockSize)
+//                        block.setFill(Color.BLUE);
+//                    block = blocks[(int) (hero.getY() / blockSize)][playerPositionX / blockSize];
+////                    System.out.println((int) (hero.getY() / blockSize) + " " + (playerPositionX / blockSize - 1));
+//                    if (block != null && hero.getX() == block.getX() + blockSize)
+//                        block.setFill(Color.BLUE);
+//                    if (playerPositionX / blockSize + 1 < blocks[0].length - 2)
+//                    block = blocks[(int) (hero.getY() / blockSize)][playerPositionX / blockSize + 1];
+////                    System.out.println((int) (hero.getY() / blockSize) + " " + (playerPositionX / blockSize - 1));
+//                    if (block != null && hero.getX() == block.getX() + blockSize)
+//                        block.setFill(Color.BLUE);
+//                }
+
+//                Block block;
+//                if (playerPositionX / blockSize != 0) {
+//                    block = blocks[(int) hero.getY() / blockSize][playerPositionX / blockSize - 1];
+//                    if (block != null && ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0)))
+//                        break;
+//                    if ((int) hero.getY() / blockSize < blocks.length - 1 && hero.getY() % blockSize != 0) {
+//                        block = blocks[(int) hero.getY() / blockSize + 1][playerPositionX / blockSize - 1];
+//                        if (block != null && ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0)))
+//                            break;
+//                    }
+//                }
+//                if (playerPositionX / blockSize < blocks[0].length - 1) {
+//                    block = blocks[(int) hero.getY() / blockSize][playerPositionX / blockSize + 1];
+//                    if (block != null && ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0)))
+//                        break;
+//                    if ((int) hero.getY() / blockSize < blocks.length - 1 && hero.getY() % blockSize != 0) {
+//                        block = blocks[(int) hero.getY() / blockSize + 1][playerPositionX / blockSize + 1];
+//                        if (block != null && ((hero.getX() + blockSize == block.getX() && velocityX > 0) || (hero.getX() == block.getX() + blockSize && velocityX < 0)))
+//                            break;
+//                    }
+//                }
 
                 playerPositionX = (int) Math.max(Math.min(playerPositionX + Math.copySign(1, velocityX), blocks[0].length * blockSize), 0);
                 if (playerPositionX >= (width - blockSize) / 2 && playerPositionX <= blocks[0].length * blockSize - (width - blockSize) / 2) {
@@ -178,7 +364,11 @@ public class Game extends Application {
                 }
                 else if (playerPositionX < (width - blockSize) / 2)
                     hero.setX(playerPositionX);
-                else if (playerPositionX > blocks[0].length * blockSize - (width - blockSize) / 2)
+                                                // full length - center start
+                else if (playerPositionX > blocks[0].length * blockSize - (width - blockSize) / 2) //{
+//                    hero.setX(playerPositionX - (blocks[0].length * blockSize - width));
+//                    System.out.println("kjbefkw");
+//                }
                     hero.setX((playerPositionX - (blocks[0].length * blockSize - width + blockSize)));
 
             }
