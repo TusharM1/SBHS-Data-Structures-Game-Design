@@ -4,8 +4,6 @@ public class Block {
 
     private int locationX, locationY, width, height;
 
-    public Block() {}
-
     public Block(int locationX, int locationY, int width, int height) {
         this.locationX = locationX;
         this.locationY = locationY;
