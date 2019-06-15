@@ -6,6 +6,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
@@ -18,9 +19,9 @@ import java.util.ArrayList;
 
 public class SideScroller extends Application {
 
-    private static int screenWidth, screenHeight;
+    private int screenWidth, screenHeight;
 
-    private static GraphicsContext graphicsContext;
+    private GraphicsContext graphicsContext;
 
     private boolean[] keyboard;
 
@@ -32,28 +33,39 @@ public class SideScroller extends Application {
 
     private String[] strings;
 
-    int velocityX = 0, velocityY = 0, accelerationY = 1;
+    private int velocityX = 0, velocityY = 0, accelerationY = 1;
 
-    boolean canJump = true;
+    private boolean canJump = true;
 
-    // Change this to just be draw function, it doesn't need to clear to draw the background
-    private void clearCanvas() {
-        graphicsContext.save();
-        graphicsContext.setFill(Color.WHITE);
-        graphicsContext.fillRect(0, 0, screenWidth, screenHeight);
-        graphicsContext.restore();
-    }
+    private int screenCenter, screenPosition = 0, heroPosition;
+
+    BackgroundLayer background1, background2;
+    BackgroundLayer clouds1, clouds2;
+    BackgroundLayer mountains1, mountains2;
+    BackgroundLayer trees1, trees2;
 
     public void draw() {
-        System.out.println(hero.getLocationX() + " " + hero.getLocationY());
-        graphicsContext.save();
+        graphicsContext.setFill(Color.WHITE);
+        graphicsContext.fillRect(0, 0, screenWidth, screenHeight);
+
+        graphicsContext.drawImage(background1.getImage(), background1.getPosition(), 0, background1.getWidth(), background1.getHeight());
+        graphicsContext.drawImage(background2.getImage(), background2.getPosition(), 0, background2.getWidth(), background2.getHeight());
+
+        graphicsContext.drawImage(clouds1.getImage(), clouds1.getPosition(), 0, clouds1.getWidth(), clouds1.getHeight());
+        graphicsContext.drawImage(clouds2.getImage(), clouds2.getPosition(), 0, clouds2.getWidth(), clouds2.getHeight());
+
+        graphicsContext.drawImage(mountains1.getImage(), mountains1.getPosition(), 0, mountains1.getWidth(), mountains1.getHeight());
+        graphicsContext.drawImage(mountains2.getImage(), mountains2.getPosition(), 0, mountains2.getWidth(), mountains2.getHeight());
+
+        graphicsContext.drawImage(trees1.getImage(), trees1.getPosition(), 0, trees1.getWidth(), trees1.getHeight());
+        graphicsContext.drawImage(trees2.getImage(), trees2.getPosition(), 0, trees2.getWidth(), trees2.getHeight());
+
         graphicsContext.setFill(Color.LIGHTBLUE);
         graphicsContext.fillRect(hero.getLocationX(), hero.getLocationY(), hero.getWidth(), hero.getHeight());
         for (Block block : blocks) {
             graphicsContext.setFill(Color.LIGHTGREEN);
-            graphicsContext.fillRect(block.getLocationX(), block.getLocationY(), block.getWidth(), block.getHeight());
+            graphicsContext.fillRect(block.getLocationX() - screenPosition, block.getLocationY(), block.getWidth(), block.getHeight());
         }
-        graphicsContext.restore();
     }
 
     @Override
@@ -69,18 +81,31 @@ public class SideScroller extends Application {
         screenHeight = strings.length * blockSize;
         screenWidth = screenWidth / blockSize * blockSize;
 
-        hero = new Block(0, 0, blockSize, blockSize);
+//        screenCenter = (screenWidth - blockSize) / 2;
+        screenCenter = 200;
+
+        hero = new Block(screenCenter, 0, blockSize, blockSize);
+        heroPosition = hero.getLocationX();
 
         for (int i = 0; i < strings.length; i++)
             for (int j = 0; j < strings[i].length(); j++)
                 if (strings[i].charAt(j) == 'x')
                     blocks.add(new Block(j * blockSize, i * blockSize, blockSize, blockSize));
 
-
+        background1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/background.png"), 0, screenWidth, screenHeight);
+//        background2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/background.png"), screenWidth, screenWidth, screenHeight);
+//
+//        clouds1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/clouds.png"), 0, screenWidth, screenHeight);
+//        clouds2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/clouds.png"), screenWidth, screenWidth, screenHeight);
+//
+//        mountains1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/mountains.png"), 0, screenWidth, screenHeight);
+//        mountains2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/mountains.png"), screenWidth, screenWidth, screenHeight);
+//
+//        trees1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/trees.png"), 0, screenWidth, screenHeight);
+//        trees2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/trees.png"), screenWidth, screenWidth, screenHeight);
 
         Canvas canvas = new Canvas(screenWidth, screenHeight);
         graphicsContext = canvas.getGraphicsContext2D();
-        clearCanvas();
 
         Group group = new Group(canvas);
         Scene scene = new Scene(group);
@@ -91,10 +116,53 @@ public class SideScroller extends Application {
         scene.widthProperty().addListener((observable, oldValue, newValue) -> {
             screenWidth = newValue.intValue();
             canvas.setWidth(screenWidth);
+
+            if (oldValue.intValue() != 0) {
+                background1.setWidth(newValue.intValue());
+                if (background1.getPosition() > background2.getPosition())
+                    background1.setPosition(background1.getPosition() - oldValue.intValue() + newValue.intValue());
+                background2.setWidth(newValue.intValue());
+                if (background2.getPosition() > background1.getPosition())
+                    background2.setPosition(background2.getPosition() - oldValue.intValue() + newValue.intValue());
+
+                clouds1.setWidth(newValue.intValue());
+                if (clouds1.getPosition() > clouds2.getPosition())
+                    clouds1.setPosition(clouds1.getPosition() - oldValue.intValue() + newValue.intValue());
+                clouds2.setWidth(newValue.intValue());
+                if (clouds2.getPosition() > clouds1.getPosition())
+                    clouds2.setPosition(clouds2.getPosition() - oldValue.intValue() + newValue.intValue());
+
+                mountains1.setWidth(newValue.intValue());
+                if (mountains1.getPosition() > mountains2.getPosition())
+                    mountains1.setPosition(mountains1.getPosition() - oldValue.intValue() + newValue.intValue());
+                mountains2.setWidth(newValue.intValue());
+                if (mountains2.getPosition() > mountains1.getPosition())
+                    mountains2.setPosition(mountains2.getPosition() - oldValue.intValue() + newValue.intValue());
+
+                trees1.setWidth(newValue.intValue());
+                if (trees1.getPosition() > trees2.getPosition())
+                    trees1.setPosition(trees1.getPosition() - oldValue.intValue() + newValue.intValue());
+                trees2.setWidth(newValue.intValue());
+                if (trees2.getPosition() > trees1.getPosition())
+                    trees2.setPosition(trees2.getPosition() - oldValue.intValue() + newValue.intValue());
+            }
         });
         scene.heightProperty().addListener((observable, oldValue, newValue) -> {
             screenHeight = newValue.intValue();
             canvas.setHeight(screenHeight);
+
+            background1.setHeight(newValue.intValue());
+            background2.setHeight(newValue.intValue());
+
+            clouds1.setHeight(newValue.intValue());
+            clouds2.setHeight(newValue.intValue());
+
+            mountains1.setHeight(newValue.intValue());
+            mountains2.setHeight(newValue.intValue());
+
+            trees1.setHeight(newValue.intValue());
+            trees2.setHeight(newValue.intValue());
+
         });
 
         primaryStage.setScene(scene);
@@ -111,12 +179,13 @@ public class SideScroller extends Application {
 
         int x = 0, y = 0;
         do {
+            // Collision Detection and Resolution for Left and Right
             collisionX:
             if (x < iterationX) {
                 // LEFT
                 if (keyboard[KeyCode.A.getCode()] && !keyboard[KeyCode.D.getCode()]) {
                     for (Block block : blocks)
-                        if (hero.getLocationX() == block.getLocationX() + block.getWidth() &&
+                        if (hero.getLocationX() == block.getLocationX() - screenPosition + block.getWidth() &&
                                 hero.getLocationY() < block.getLocationY() + block.getHeight() &&
                                 hero.getLocationY() + hero.getHeight() > block.getLocationY() ||
                                 hero.getLocationX() <= 0) {
@@ -124,12 +193,17 @@ public class SideScroller extends Application {
                             x = iterationX;
                             break collisionX;
                         }
-                    hero.setLocationX(hero.getLocationX() - 1);
+                    if (heroPosition <= screenCenter  || heroPosition >= strings[0].length() * blockSize - screenWidth + screenCenter)
+                        hero.setLocationX(hero.getLocationX() - 1);
+                    else
+                        hero.setLocationX(screenCenter);
+                    heroPosition--;
+                    screenPosition = Math.max(Math.min(heroPosition - screenCenter, strings[0].length() * blockSize - screenWidth), 0);
                 }
                 // RIGHT
                 if (keyboard[KeyCode.D.getCode()] && !keyboard[KeyCode.A.getCode()]) {
                     for (Block block : blocks)
-                        if (hero.getLocationX() + hero.getWidth() == block.getLocationX() &&
+                        if (hero.getLocationX() + hero.getWidth() == block.getLocationX() - screenPosition &&
                                 hero.getLocationY() < block.getLocationY() + block.getHeight() &&
                                 hero.getLocationY() + hero.getHeight() > block.getLocationY() ||
                                 hero.getLocationX() + hero.getWidth() >= screenWidth) {
@@ -137,19 +211,25 @@ public class SideScroller extends Application {
                             x = iterationX;
                             break collisionX;
                         }
-                    hero.setLocationX(hero.getLocationX() + 1);
+                    if (heroPosition <= screenCenter  || heroPosition >= strings[0].length() * blockSize - screenWidth + screenCenter)
+                        hero.setLocationX(hero.getLocationX() + 1);
+                    else
+                        hero.setLocationX(screenCenter);
+                    heroPosition++;
+                    screenPosition = Math.max(Math.min(heroPosition - screenCenter, strings[0].length() * blockSize - screenWidth), 0);
                 }
                 x++;
             }
 
+            // Collision Detection and Resolution for Up and Down
             collisionY:
             if (y < iterationY) {
                 // UP
                 if (velocityY < 0) {
                     for (Block block : blocks)
                         if (hero.getLocationY() == block.getLocationY() + block.getHeight() &&
-                                hero.getLocationX() < block.getLocationX() + block.getWidth() &&
-                                hero.getLocationX() + hero.getWidth() > block.getLocationX() ||
+                                hero.getLocationX() < block.getLocationX() - screenPosition + block.getWidth() &&
+                                hero.getLocationX() + hero.getWidth() > block.getLocationX() - screenPosition ||
                                 hero.getLocationY() <= 0) {
                             velocityY = 0;
                             y = iterationY;
@@ -161,8 +241,8 @@ public class SideScroller extends Application {
                 if (velocityY > 0) {
                     for (Block block : blocks)
                         if (hero.getLocationY() + hero.getHeight() == block.getLocationY() &&
-                                hero.getLocationX() < block.getLocationX() + block.getWidth() &&
-                                hero.getLocationX() + hero.getWidth() > block.getLocationX() ||
+                                hero.getLocationX() < block.getLocationX() - screenPosition + block.getWidth() &&
+                                hero.getLocationX() + hero.getWidth() > block.getLocationX() - screenPosition ||
                                 hero.getLocationY() + hero.getHeight() >= screenHeight) {
                             canJump = true;
                             velocityY = 0;
@@ -189,8 +269,10 @@ public class SideScroller extends Application {
 
         // RESET
         if (keyboard[KeyCode.SPACE.getCode()]) {
-            hero.setLocationX((screenWidth - hero.getWidth()) / 2);
+            hero.setLocationX(screenCenter);
             hero.setLocationY(0);
+            heroPosition = screenCenter;
+            screenPosition = 0;
             velocityY = 0;
         }
 
@@ -200,17 +282,46 @@ public class SideScroller extends Application {
             canJump = false;
         }
 
-        velocityX = (keyboard[KeyCode.A.getCode()] ? -5 : 0) + (keyboard[KeyCode.D.getCode()] ? 5 : 0);
-        velocityY += accelerationY;
+    }
 
+    private void moveBackground() {
+        int parallax = (int) Math.copySign(1, velocityX), overlap = Math.abs(velocityX);
+        if (velocityX != 0 && heroPosition > screenCenter && heroPosition < strings[0].length() * blockSize - screenWidth + screenCenter) {
+            background1.setPosition(background1.getPosition() - parallax);
+            background1.setPosition(background1.getPosition() > screenWidth ? -screenWidth + overlap : (background1.getPosition() < -screenWidth ? screenWidth - overlap: background1.getPosition()));
+            background2.setPosition(background2.getPosition() - parallax);
+            background2.setPosition(background2.getPosition() > screenWidth ? -screenWidth + overlap: (background2.getPosition() < -screenWidth ? screenWidth - overlap: background2.getPosition()));
+
+            clouds1.setPosition(clouds1.getPosition() - 2 * parallax);
+            clouds1.setPosition(clouds1.getPosition() > screenWidth ? -screenWidth + overlap: (clouds1.getPosition() < -screenWidth ? screenWidth - overlap: clouds1.getPosition()));
+            clouds2.setPosition(clouds2.getPosition() - 2 * parallax);
+            clouds2.setPosition(clouds2.getPosition() > screenWidth ? -screenWidth + overlap: (clouds2.getPosition() < -screenWidth ? screenWidth - overlap: clouds2.getPosition()));
+
+            mountains1.setPosition(mountains1.getPosition() - 3 * parallax);
+            mountains1.setPosition(mountains1.getPosition() > screenWidth ? -screenWidth + overlap: (mountains1.getPosition() < -screenWidth ? screenWidth - overlap: mountains1.getPosition()));
+            mountains2.setPosition(mountains2.getPosition() - 3 * parallax);
+            mountains2.setPosition(mountains2.getPosition() > screenWidth ? -screenWidth + overlap: (mountains2.getPosition() < -screenWidth ? screenWidth - overlap: mountains2.getPosition()));
+
+            trees1.setPosition(trees1.getPosition() - 4 * parallax);
+            trees1.setPosition(trees1.getPosition() > screenWidth ? -screenWidth + overlap: (trees1.getPosition() < -screenWidth ? screenWidth - overlap: trees1.getPosition()));
+            trees2.setPosition(trees2.getPosition() - 4 * parallax);
+            trees2.setPosition(trees2.getPosition() > screenWidth ? -screenWidth + overlap: (trees2.getPosition() < -screenWidth ? screenWidth - overlap: trees2.getPosition()));
+        }
     }
 
     private class Animation extends AnimationTimer {
         @Override
         public void handle(long now) {
-            clearCanvas();
+            moveBackground();
+
+            velocityX = (keyboard[KeyCode.A.getCode()] ? -5 : 0) + (keyboard[KeyCode.D.getCode()] ? 5 : 0);
+//            velocityX = 5;
+            velocityY += accelerationY;
 
             moveBlock();
+
+            screenPosition = Math.max(Math.min(heroPosition - screenCenter, strings[0].length() * blockSize - screenWidth), 0);
+
             draw();
         }
     }
