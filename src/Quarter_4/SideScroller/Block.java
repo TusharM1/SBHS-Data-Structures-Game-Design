@@ -10,7 +10,12 @@ public class Block extends Rectangle {
         setFill(Color.RED);
     }
 
-    public void setLocation(int x, int y) {
+    public Block(double x, double y) {
+        super(x, y, Game.blockSize, Game.blockSize);
+        setFill(Color.RED);
+    }
+
+    public void setLocation(double x, double y) {
         setX(x);
         setY(y);
     }

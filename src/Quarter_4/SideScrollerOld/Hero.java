@@ -1,4 +1,4 @@
-package Quarter_4.SideScroller2;
+package Quarter_4.SideScrollerOld;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -6,7 +6,7 @@ import javafx.scene.shape.Rectangle;
 public class Hero extends Rectangle {
 
     public Hero() {
-        super(NewGame.blockSize, NewGame.blockSize);
+        super(OldGame.blockSize, OldGame.blockSize);
         setFill(Color.GREEN);
     }
 

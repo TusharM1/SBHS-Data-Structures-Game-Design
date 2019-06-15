@@ -1,4 +1,4 @@
-package Quarter_4.SideScroller2;
+package Quarter_4.SideScrollerOld;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -6,16 +6,11 @@ import javafx.scene.shape.Rectangle;
 public class Block extends Rectangle {
 
     public Block() {
-        super(NewGame.blockSize, NewGame.blockSize);
+        super(OldGame.blockSize, OldGame.blockSize);
         setFill(Color.RED);
     }
 
-    public Block(double x, double y) {
-        super(x, y, NewGame.blockSize, NewGame.blockSize);
-        setFill(Color.RED);
-    }
-
-    public void setLocation(double x, double y) {
+    public void setLocation(int x, int y) {
         setX(x);
         setY(y);
     }
