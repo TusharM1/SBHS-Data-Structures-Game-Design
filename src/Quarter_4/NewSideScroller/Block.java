@@ -1,14 +1,21 @@
 package Quarter_4.NewSideScroller;
 
+import javafx.scene.image.Image;
+
 public class Block {
 
-    private int locationX, locationY, width, height;
+    private int locationX;
+    private int locationY;
+    private int width;
+    private int height;
+    private Image image;
 
-    public Block(int locationX, int locationY, int width, int height) {
+    public Block(int locationX, int locationY, int width, int height, Image image) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.width = width;
         this.height = height;
+        this.image = image;
     }
 
     public int getLocationX() { return locationX; }
@@ -22,4 +29,7 @@ public class Block {
 
     public int getHeight() { return height; }
     public void setHeight(int height) { this.height = height; }
+
+    public Image getImage() { return image; }
+    public void setImage(Image image) { this.image = image; }
 }

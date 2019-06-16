@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
 
-public class Hero extends Block {
+public class BadGuy extends Block {
 
     private Image[] idle;
     private Image[] walking;
@@ -15,25 +15,25 @@ public class Hero extends Block {
 
     private boolean direction;
 
-    public Hero(int locationX, int locationY, int width, int height) {
+    public BadGuy(int locationX, int locationY, int width, int height) {
         super(locationX, locationY, width, height, null);
 
-        Image idle = new Image("Quarter_4/NewSideScroller/Images/Hero/idle.png");
+        Image idle = new Image("Quarter_4/NewSideScroller/Images/BadGuy/idle.png");
         PixelReader idleReader = idle.getPixelReader();
         this.idle = new Image[(int) (idle.getWidth() / idle.getHeight())];
         for (int i = 0; i < this.idle.length; i++)
             this.idle[i] = new WritableImage(idleReader, i * (int) idle.getHeight(), 0, (int) idle.getHeight(), (int) idle.getHeight());
 
-        Image walking = new Image("Quarter_4/NewSideScroller/Images/Hero/walk.png");
+        Image walking = new Image("Quarter_4/NewSideScroller/Images/BadGuy/fly.png");
         PixelReader walkingReader = walking.getPixelReader();
         this.walking = new Image[(int) (walking.getWidth() / walking.getHeight())];
         for (int i = 0; i < this.walking.length; i++)
             this.walking[i] = new WritableImage(walkingReader, i * (int) walking.getHeight(), 0, (int) walking.getHeight(), (int) walking.getHeight());
 
         currentState = State.IDLE;
-        direction = true;
+        direction = false;
     }
-    
+
 
     public void setState(State state, long now) {
         this.currentState = state;

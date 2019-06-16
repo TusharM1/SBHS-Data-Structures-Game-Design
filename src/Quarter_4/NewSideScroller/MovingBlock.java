@@ -7,7 +7,7 @@ public class MovingBlock extends Block {
     private int direction;
 
     public MovingBlock(int minimum, int maximum, int constant, int width, int height, Orientation orientation) {
-        super(orientation == Orientation.HORIZONTAL ? minimum : constant, orientation == Orientation.HORIZONTAL ? constant : minimum, width, height);
+        super(orientation == Orientation.HORIZONTAL ? minimum : constant, orientation == Orientation.HORIZONTAL ? constant : minimum, width, height, null);
         this.minimum = minimum;
         this.maximum = maximum;
         this.constant = constant;
