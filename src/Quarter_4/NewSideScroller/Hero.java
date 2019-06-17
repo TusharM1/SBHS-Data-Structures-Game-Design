@@ -6,13 +6,15 @@ import javafx.scene.image.WritableImage;
 
 public class Hero extends Block {
 
-    private static Image[] idle, walking, slashing;
+    private static Image[] idle, walking, slashing, death;
 
     private State currentState, lastState;
 
     private long startingTime;
 
     private boolean direction;
+
+    private boolean stateConsumed;
     
     static {
         Image idle = new Image("Quarter_4/NewSideScroller/Images/Hero/idle.png");
@@ -32,6 +34,12 @@ public class Hero extends Block {
         Hero.slashing = new Image[(int) (slashing.getWidth() / slashing.getHeight())];
         for (int i = 0; i < Hero.slashing.length; i++)
             Hero.slashing[i] = new WritableImage(slashingReader, i * (int) slashing.getHeight(), 0, (int) slashing.getHeight(), (int) slashing.getHeight());
+
+        Image death = new Image("Quarter_4/NewSideScroller/Images/Hero/death.png");
+        PixelReader deathReader = death.getPixelReader();
+        Hero.death = new Image[(int) (death.getWidth() / death.getHeight())];
+        for (int i = 0; i < Hero.death.length; i++)
+            Hero.death[i] = new WritableImage(deathReader, i * (int) death.getHeight(), 0, (int) death.getHeight(), (int) death.getHeight());
     }
 
     public Hero(int locationX, int locationY, int width, int height) {
@@ -39,11 +47,16 @@ public class Hero extends Block {
         
         currentState = State.IDLE;
         direction = true;
+        stateConsumed = false;
     }
-    
+
+    public boolean inTemporaryState() {
+        return lastState != null;
+    }
 
     public void setState(State state, long now) {
         if (lastState == null) {
+            stateConsumed = false;
             this.currentState = state;
             this.startingTime = now;
             this.lastState = null;
@@ -54,6 +67,7 @@ public class Hero extends Block {
         this.lastState = this.currentState;
         this.currentState = state;
         this.startingTime = now;
+        stateConsumed = false;
     }
 
     public State getState() {
@@ -72,11 +86,15 @@ public class Hero extends Block {
     public boolean getDirection() { return direction; }
     public void setDirection(boolean direction) { this.direction = direction; }
 
+    public boolean isStateConsumed() { return stateConsumed; }
+    public void consumeState() { this.stateConsumed = true; }
+
     public enum State {
 
         IDLE (idle, (1.0 / 8) * 1E9),
         WALKING (walking, (1.0 / 11) * 1E9),
-        SLASHING (slashing, (1.0 / 11) * 1E9);
+        SLASHING (slashing, (1.0 / 11) * 1E9),
+        DEATH (death, (1.0 / 8) * 1E9);
 
         private double animationSpeed;
         private Image[] images;

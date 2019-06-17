@@ -21,15 +21,16 @@ import java.util.ArrayList;
 
 public class SideScroller extends Application {
 
-    private boolean isOnMovingBlock;
+    private boolean isOnHorizontalBlock;
     private boolean canJump;
     private boolean debug;
 
+    private double lastLocation;
     private double velocityX, velocityY, acceleration;
     private int heroPosition, blockSize;
     private int screenWidth, screenHeight, screenCenter, screenPosition;
 
-    private long accelerationTime;
+    private long currentTime, accelerationTime;
 
     private GraphicsContext graphicsContext;
     private Hero hero;
@@ -81,13 +82,15 @@ public class SideScroller extends Application {
             for (int j = 0; j < strings[i].length(); j++)
                 if (strings[i].charAt(j) == 'x')
                     blocks.add(new Block(j * blockSize, i * blockSize, blockSize, blockSize, blockImage));
+                else if (strings[i].charAt(j) == 'b')
+                    blocks.add(new BreakableBlock(j * blockSize, i * blockSize, blockSize, blockSize, coinImage, 5));
                 else if (strings[i].charAt(j) == 'o')
                     badGuy = new BadGuy(j * blockSize, i * blockSize, blockSize, blockSize);
                 else if (strings[i].charAt(j) == 'p')
                     coin = new Coin(j * blockSize, i * blockSize, blockSize, blockSize, coinImage);
 
-        veritcalBlock = new MovingBlock(12 * blockSize, 15 * blockSize - 300, 4 * blockSize, 3 * blockSize, blockSize, MovingBlock.Orientation.VERTICAL);
-        horizontalBlock = new MovingBlock(12 * blockSize, 15 * blockSize, 3 * blockSize, 2 * blockSize, blockSize, MovingBlock.Orientation.HORIZONTAL);
+        veritcalBlock = new MovingBlock(blockSize / 2, 2 * blockSize, 30 * blockSize, blockSize, 3 * blockSize, blockImage, MovingBlock.Orientation.VERTICAL);
+        horizontalBlock = new MovingBlock(12 * blockSize, 15 * blockSize, 3 * blockSize, 2 * blockSize, blockSize, blockImage, MovingBlock.Orientation.HORIZONTAL);
 
         blocks.add(veritcalBlock);
         blocks.add(horizontalBlock);
@@ -174,50 +177,44 @@ public class SideScroller extends Application {
         animation.start();
     }
 
-    private boolean collisionRight() {
+    private Block collisionRight() {
         for (Block block : blocks)
             if (hero.getLocationX() + hero.getWidth() == block.getLocationX() - screenPosition &&
                     hero.getLocationY() < block.getLocationY() + block.getHeight() &&
                     hero.getLocationY() + hero.getHeight() > block.getLocationY() ||
                     hero.getLocationX() + hero.getWidth() >= screenWidth)
-                return true;
-        return false;
+                return block;
+        return null;
     }
 
-    private boolean collisionLeft() {
+    private Block collisionLeft() {
         for (Block block : blocks)
             if (hero.getLocationX() == block.getLocationX() - screenPosition + block.getWidth() &&
                     hero.getLocationY() < block.getLocationY() + block.getHeight() &&
-                    hero.getLocationY() + hero.getHeight() > block.getLocationY() ||
-                    hero.getLocationX() <= 0)
-                return true;
-        return false;
+                    hero.getLocationY() + hero.getHeight() > block.getLocationY())
+                return block;
+        return null;
     }
 
-    private boolean collisionUp() {
+    private Block collisionUp() {
         for (Block block : blocks)
             if (hero.getLocationY() == block.getLocationY() + block.getHeight() &&
                     hero.getLocationX() < block.getLocationX() - screenPosition + block.getWidth() &&
-                    hero.getLocationX() + hero.getWidth() > block.getLocationX() - screenPosition ||
-                    hero.getLocationY() <= 0)
-                return true;
-        return false;
+                    hero.getLocationX() + hero.getWidth() > block.getLocationX() - screenPosition)
+                return block;
+        return null;
     }
 
-    private boolean collisionDown() {
+    private Block collisionDown() {
         for (Block block : blocks) {
             if (hero.getLocationY() + hero.getHeight() == block.getLocationY() &&
                     hero.getLocationX() < block.getLocationX() - screenPosition + block.getWidth() &&
-                    hero.getLocationX() + hero.getWidth() > block.getLocationX() - screenPosition ||
-                    hero.getLocationY() + hero.getHeight() >= screenHeight) {
-                if (block == horizontalBlock)
-                    this.isOnMovingBlock = true;
-                else
-                    this.isOnMovingBlock = false;
-                return true;
+                    hero.getLocationX() + hero.getWidth() > block.getLocationX() - screenPosition) {
+                isOnHorizontalBlock = block == horizontalBlock;
+                return block;
             }
         }
-        return false;
+        return null;
     }
 
     private void adjustLocationX(int direction) {
@@ -227,6 +224,14 @@ public class SideScroller extends Application {
             hero.setLocationX(screenCenter);
         heroPosition += direction;
         screenPosition = Math.max(Math.min(heroPosition - screenCenter, strings[0].length() * blockSize - screenWidth), 0);
+    }
+
+    private void resetHero() {
+        hero.setLocationX(screenCenter);
+        hero.setLocationY(0);
+        heroPosition = screenCenter;
+        screenPosition = 0;
+        velocityY = 0;
     }
 
     private void moveHero() {
@@ -240,7 +245,7 @@ public class SideScroller extends Application {
             if (x < iterationX) {
                 // LEFT
                 if (keyboard[KeyCode.A.getCode()] && !keyboard[KeyCode.D.getCode()]) {
-                    if (collisionLeft()) {
+                    if (collisionLeft() != null) {
                         velocityX = 0;
                         x = iterationX;
                         break collisionX;
@@ -249,7 +254,7 @@ public class SideScroller extends Application {
                 }
                 // RIGHT
                 if (keyboard[KeyCode.D.getCode()] && !keyboard[KeyCode.A.getCode()]) {
-                    if (collisionRight()) {
+                    if (collisionRight() != null) {
                         velocityX = 0;
                         x = iterationX;
                         break collisionX;
@@ -264,7 +269,7 @@ public class SideScroller extends Application {
             if (y < iterationY) {
                 // UP
                 if (velocityY < 0) {
-                    if (collisionUp()) {
+                    if (collisionUp() != null) {
                         velocityY = 0;
                         y = iterationY;
                         break collisionY;
@@ -273,13 +278,13 @@ public class SideScroller extends Application {
                 }
                 // DOWN
                 if (velocityY > 0) {
-                    if (collisionDown()) {
+                    if (collisionDown() != null) {
                         canJump = true;
                         velocityY = 0;
                         y = iterationY;
                         break collisionY;
                     }
-                    this.isOnMovingBlock = false;
+                    isOnHorizontalBlock = false;
                     hero.setLocationY(hero.getLocationY() + 1);
                     canJump = false;
                 }
@@ -288,24 +293,15 @@ public class SideScroller extends Application {
 
         } while (x != iterationX || y != iterationY);
 
+        // CAP LEFT
+        if (hero.getLocationX() < 0)
+            while (hero.getLocationX() < 0)
+                hero.setLocationX(hero.getLocationX() + 1);
+
         // CAP RIGHT
         if (hero.getLocationX() + hero.getWidth() > screenWidth)
             while (hero.getLocationX() + hero.getWidth() > screenWidth)
                 hero.setLocationX(hero.getLocationX() - 1);
-
-        // CAP BOTTOM
-        if (hero.getLocationY() + hero.getHeight() > screenHeight)
-            while (hero.getLocationY() + hero.getHeight() > screenHeight)
-                hero.setLocationY(hero.getLocationY() - 1);
-
-        // RESET
-        if (keyboard[KeyCode.SPACE.getCode()]) {
-            hero.setLocationX(screenCenter);
-            hero.setLocationY(0);
-            heroPosition = screenCenter;
-            screenPosition = 0;
-            velocityY = 0;
-        }
 
         // JUMP
         if (keyboard[KeyCode.W.getCode()] && canJump) {
@@ -347,7 +343,7 @@ public class SideScroller extends Application {
         }
     }
 
-    private void draw(long now) {
+    private void draw() {
         graphicsContext.setFill(Color.WHITE);
         graphicsContext.clearRect(0, 0, screenWidth, screenHeight);
 
@@ -365,23 +361,32 @@ public class SideScroller extends Application {
 
         graphicsContext.setFill(Color.LIGHTGREEN);
         for (Block block : blocks)
-            if (block.getImage() == null)
-                graphicsContext.fillRect(block.getLocationX() - screenPosition, block.getLocationY(), block.getWidth(), block.getHeight());
-            else
+            if (block instanceof MovingBlock) {
+                MovingBlock movingBlock = (MovingBlock) block;
+                if (movingBlock.getOrientation() == MovingBlock.Orientation.HORIZONTAL)
+                    for (int i = 0; i < movingBlock.getWidth() / movingBlock.getHeight(); i++)
+                        graphicsContext.drawImage(block.getImage(), block.getLocationX() - screenPosition + i * block.getHeight(), block.getLocationY(), block.getHeight(), block.getHeight());
+                else
+                    for (int i = 0; i < movingBlock.getHeight() / movingBlock.getWidth(); i++)
+                        graphicsContext.drawImage(block.getImage(), block.getLocationX() - screenPosition, block.getLocationY() + i * block.getWidth(), block.getWidth(), block.getWidth());
+            }
+            else if (block.getImage() != null)
                 graphicsContext.drawImage(block.getImage(), block.getLocationX() - screenPosition, block.getLocationY(), block.getWidth(), block.getHeight());
+            else
+                graphicsContext.fillRect(block.getLocationX() - screenPosition, block.getLocationY(), block.getWidth(), block.getHeight());
 
         if (!coin.isConsumed())
             graphicsContext.drawImage(coin.getImage(), coin.getLocationX() - screenPosition, coin.getLocationY(), coin.getWidth(), coin.getHeight());
 
         if (hero.getDirection())
-            graphicsContext.drawImage(hero.getImage(now), hero.getLocationX(), hero.getLocationY(), hero.getWidth(), hero.getHeight());
+            graphicsContext.drawImage(hero.getImage(currentTime), hero.getLocationX(), hero.getLocationY(), hero.getWidth(), hero.getHeight());
         else
-            graphicsContext.drawImage(hero.getImage(now), hero.getLocationX() + hero.getWidth(), hero.getLocationY(), -hero.getWidth(), hero.getHeight());
+            graphicsContext.drawImage(hero.getImage(currentTime), hero.getLocationX() + hero.getWidth(), hero.getLocationY(), -hero.getWidth(), hero.getHeight());
 
         if (badGuy.getDirection())
-            graphicsContext.drawImage(badGuy.getImage(now), badGuy.getLocationX() - screenPosition, badGuy.getLocationY(), badGuy.getWidth(), badGuy.getHeight());
+            graphicsContext.drawImage(badGuy.getImage(currentTime), badGuy.getLocationX() - screenPosition, badGuy.getLocationY(), badGuy.getWidth(), badGuy.getHeight());
         else
-            graphicsContext.drawImage(badGuy.getImage(now), badGuy.getLocationX() - screenPosition + badGuy.getWidth(), badGuy.getLocationY(), -badGuy.getWidth(), badGuy.getHeight());
+            graphicsContext.drawImage(badGuy.getImage(currentTime), badGuy.getLocationX() - screenPosition + badGuy.getWidth(), badGuy.getLocationY(), -badGuy.getWidth(), badGuy.getHeight());
 
         if (debug)
             graphicsContext.strokeRect(hero.getLocationX(), hero.getLocationY(), hero.getWidth(), hero.getHeight());
@@ -395,25 +400,68 @@ public class SideScroller extends Application {
                  block1.getLocationX() + block1.getWidth() > block2.getLocationX() - screenPosition));
     }
 
-    double lastLocation;
-
     private class Animation extends AnimationTimer {
         @Override
         public void handle(long now) {
+            currentTime = now;
+
+            // DEATH
+            if (keyboard[KeyCode.SPACE.getCode()]) {
+                hero.setTemporaryState(Hero.State.DEATH, currentTime);
+                draw();
+                return;
+            }
+
+            if (hero.getLocationY() >= screenHeight)
+                resetHero();
+
+            if (hero.getState() == Hero.State.DEATH) {
+                if (hero.inTemporaryState()) {
+                    draw();
+                    return;
+                }
+                resetHero();
+            }
+
             // Parallax
             moveBackground(velocityX);
 
-            velocityX = (keyboard[KeyCode.A.getCode()] ? -5 : 0) + (keyboard[KeyCode.D.getCode()] ? 5 : 0);
+            if (hero.getState() != Hero.State.SLASHING) {
+                velocityX = (keyboard[KeyCode.A.getCode()] ? -5 : 0) + (keyboard[KeyCode.D.getCode()] ? 5 : 0);
 
-            if (keyboard[KeyCode.D.getCode()] && !keyboard[KeyCode.A.getCode()])
-                hero.setDirection(true);
-            else if (keyboard[KeyCode.A.getCode()] && !keyboard[KeyCode.D.getCode()])
-                hero.setDirection(false);
+                if (keyboard[KeyCode.D.getCode()] && !keyboard[KeyCode.A.getCode()])
+                    hero.setDirection(true);
+                else if (keyboard[KeyCode.A.getCode()] && !keyboard[KeyCode.D.getCode()])
+                    hero.setDirection(false);
+            }
+            else
+                velocityX = 0;
 
             // Hero GIF
-
             if (mouse != null && !mouse.isConsumed() && mouse.getButton() == MouseButton.PRIMARY && mouse.getEventType() == MouseEvent.MOUSE_CLICKED) {
                 hero.setTemporaryState(Hero.State.SLASHING, now);
+                if (hero.getDirection()) {
+                    adjustLocationX(1);
+                    Block block = collisionRight();
+                    if (block instanceof BreakableBlock) {
+                        BreakableBlock breakableBlock = ((BreakableBlock) block);
+                        breakableBlock.setHealth(breakableBlock.getHealth() - 1);
+                        if (breakableBlock.getHealth() < 0)
+                            blocks.remove(breakableBlock);
+                    }
+                    hero.consumeState();
+                    adjustLocationX(-1);
+                }
+                else {
+                    Block block = collisionLeft();
+                    if (block instanceof BreakableBlock) {
+                        BreakableBlock breakableBlock = ((BreakableBlock) block);
+                        breakableBlock.setHealth(breakableBlock.getHealth() - 1);
+                        if (breakableBlock.getHealth() < 0)
+                            blocks.remove(breakableBlock);
+                    }
+                    hero.consumeState();
+                }
                 mouse.consume();
             }
             else
@@ -435,19 +483,25 @@ public class SideScroller extends Application {
             velocityY += acceleration;
 
             // Moving Block collision
-            boolean collisionRight = collisionRight(), collisionLeft = collisionLeft();
-            if (collisionRight && !collisionLeft) {
+            boolean collisionRight = collisionRight() != null, collisionLeft = collisionLeft() != null;
+            if (collisionRight && !collisionLeft || hero.getLocationY() > screenWidth) {
                 lastLocation = heroPosition;
                 adjustLocationX(-1);
             }
-            if (collisionLeft && !collisionRight) {
+            if (collisionLeft && !collisionRight || hero.getLocationY() < 0) {
                 lastLocation = heroPosition;
                 adjustLocationX(1);
             }
 
+            boolean collisionUp = collisionUp() != null, collisionDown = collisionDown() != null;
+            if (collisionUp && !collisionDown)
+                hero.setLocationY(hero.getLocationY() + 1);
+            if (collisionDown && !collisionUp)
+                hero.setLocationY(hero.getLocationY() - 1);
+
             // Moving Blocks Parallax
-            if (isOnMovingBlock)
-                if (!collisionLeft() && horizontalBlock.getDirection() < 0 || !collisionRight() && horizontalBlock.getDirection() > 0) {
+            if (isOnHorizontalBlock)
+                if (collisionLeft() == null && horizontalBlock.getDirection() < 0 || collisionRight() == null && horizontalBlock.getDirection() > 0) {
                     adjustLocationX(horizontalBlock.getDirection());
                     if (lastLocation != heroPosition)
                         moveBackground(horizontalBlock.getDirection());
@@ -467,7 +521,7 @@ public class SideScroller extends Application {
             screenPosition = Math.max(Math.min(heroPosition - screenCenter, strings[0].length() * blockSize - screenWidth), 0);
 
             // Final Draw
-            draw(now);
+            draw();
         }
     }
 
