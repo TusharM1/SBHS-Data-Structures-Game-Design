@@ -1,4 +1,4 @@
-package Quarter_4.NewSideScroller;
+package Quarter_4.SideScroller;
 
 import javafx.scene.image.Image;
 

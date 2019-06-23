@@ -1,4 +1,4 @@
-package Quarter_4.NewSideScroller;
+package Quarter_4.SideScroller;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
@@ -17,13 +17,13 @@ public class BadGuy extends MovingBlock {
 //        super(locationX, locationY, width, height, null);
         super(minimum, maximum, constant, width, height, null, orientation);
 
-        Image idle = new Image("Quarter_4/NewSideScroller/Images/BadGuy/idle.png");
+        Image idle = new Image("Quarter_4/SideScroller/Images/BadGuy/idle.png");
         PixelReader idleReader = idle.getPixelReader();
         this.idle = new Image[(int) (idle.getWidth() / idle.getHeight())];
         for (int i = 0; i < this.idle.length; i++)
             this.idle[i] = new WritableImage(idleReader, i * (int) idle.getHeight(), 0, (int) idle.getHeight(), (int) idle.getHeight());
 
-        Image walking = new Image("Quarter_4/NewSideScroller/Images/BadGuy/fly.png");
+        Image walking = new Image("Quarter_4/SideScroller/Images/BadGuy/fly.png");
         PixelReader walkingReader = walking.getPixelReader();
         this.walking = new Image[(int) (walking.getWidth() / walking.getHeight())];
         for (int i = 0; i < this.walking.length; i++)

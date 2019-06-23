@@ -1,4 +1,4 @@
-package Quarter_4.NewSideScroller;
+package Quarter_4.SideScroller;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
@@ -58,7 +58,7 @@ public class SideScroller extends Application {
     public void start(Stage primaryStage) throws IOException {
         blocks = new ArrayList<>();
 
-        strings = Files.readString(Paths.get("src/Quarter_4/NewSideScroller/level.txt")).split("\n");
+        strings = Files.readString(Paths.get("src/Quarter_4/SideScroller/level.txt")).split("\n");
 
         screenHeight = 400;
         screenWidth = 800;
@@ -78,8 +78,8 @@ public class SideScroller extends Application {
         hero = new Hero(screenCenter, 0, blockSize, blockSize);
         heroPosition = hero.getLocationX();
 
-        Image blockImage = new Image("Quarter_4/NewSideScroller/Images/Items/floor.png");
-        Image coinImage = new Image("Quarter_4/NewSideScroller/Images/Items/coin.png");
+        Image blockImage = new Image("Quarter_4/SideScroller/Images/Items/floor.png");
+        Image coinImage = new Image("Quarter_4/SideScroller/Images/Items/coin.png");
 
         for (int i = 0; i < strings.length; i++)
             for (int j = 0; j < strings[i].length(); j++)
@@ -101,17 +101,17 @@ public class SideScroller extends Application {
 
         badGuy = new BadGuy(26 * blockSize, 31 * blockSize, 4 * blockSize, blockSize, blockSize, MovingBlock.Orientation.HORIZONTAL);
 
-        background1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/background.png"), 0, screenWidth, screenHeight);
-        background2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/background.png"), screenWidth, screenWidth, screenHeight);
+        background1 = new BackgroundLayer(new Image("Quarter_4/SideScroller/Images/Background/background.png"), 0, screenWidth, screenHeight);
+        background2 = new BackgroundLayer(new Image("Quarter_4/SideScroller/Images/Background/background.png"), screenWidth, screenWidth, screenHeight);
 
-        clouds1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/clouds.png"), 0, screenWidth, screenHeight);
-        clouds2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/clouds.png"), screenWidth, screenWidth, screenHeight);
+        clouds1 = new BackgroundLayer(new Image("Quarter_4/SideScroller/Images/Background/clouds.png"), 0, screenWidth, screenHeight);
+        clouds2 = new BackgroundLayer(new Image("Quarter_4/SideScroller/Images/Background/clouds.png"), screenWidth, screenWidth, screenHeight);
 
-        mountains1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/mountains.png"), 0, screenWidth, screenHeight);
-        mountains2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/mountains.png"), screenWidth, screenWidth, screenHeight);
+        mountains1 = new BackgroundLayer(new Image("Quarter_4/SideScroller/Images/Background/mountains.png"), 0, screenWidth, screenHeight);
+        mountains2 = new BackgroundLayer(new Image("Quarter_4/SideScroller/Images/Background/mountains.png"), screenWidth, screenWidth, screenHeight);
 
-        trees1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/trees.png"), 0, screenWidth, screenHeight);
-        trees2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/trees.png"), screenWidth, screenWidth, screenHeight);
+        trees1 = new BackgroundLayer(new Image("Quarter_4/SideScroller/Images/Background/trees.png"), 0, screenWidth, screenHeight);
+        trees2 = new BackgroundLayer(new Image("Quarter_4/SideScroller/Images/Background/trees.png"), screenWidth, screenWidth, screenHeight);
 
         Canvas canvas = new Canvas(screenWidth, screenHeight);
         graphicsContext = canvas.getGraphicsContext2D();

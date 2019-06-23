@@ -1,27 +1,39 @@
 package Quarter_4.SideScroller;
 
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.image.Image;
 
-public class Block extends Rectangle {
+public class Block {
 
-    public Block() {
-        super(Game.blockSize, Game.blockSize);
-        setFill(Color.RED);
+    private int locationX;
+    private int locationY;
+    private int width;
+    private int height;
+    private Image image;
+    private boolean isConsumed;
+
+    public Block(int locationX, int locationY, int width, int height, Image image) {
+        this.locationX = locationX;
+        this.locationY = locationY;
+        this.width = width;
+        this.height = height;
+        this.image = image;
     }
 
-    public Block(double x, double y) {
-        super(x, y, Game.blockSize, Game.blockSize);
-        setFill(Color.RED);
-    }
+    public int getLocationX() { return locationX; }
+    public void setLocationX(int locationX) { this.locationX = locationX; }
 
-    public void setLocation(double x, double y) {
-        setX(x);
-        setY(y);
-    }
+    public int getLocationY() { return locationY; }
+    public void setLocationY(int locationY) { this.locationY = locationY; }
 
-//    @Override
-//    public String toString() {
-////        return "(" + x + ", " + y + ")";
-//    }
+    public int getWidth() { return width; }
+    public void setWidth(int width) { this.width = width; }
+
+    public int getHeight() { return height; }
+    public void setHeight(int height) { this.height = height; }
+
+    public Image getImage() { return image; }
+    public void setImage(Image image) { this.image = image; }
+
+    public boolean isConsumed() { return isConsumed; }
+    public void consume() { isConsumed = true; }
 }
