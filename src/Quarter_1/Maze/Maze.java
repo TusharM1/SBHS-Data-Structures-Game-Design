@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-public class MyMazeThing extends JPanel implements KeyListener {
+public class Maze extends JPanel implements KeyListener {
 
     JFrame frame;
     ArrayList<String[]> arrayList;
@@ -26,7 +26,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
     boolean is3D;
     boolean[][] breadCrumbs;
 
-    MyMazeThing() {
+    Maze() {
         frame = new JFrame();
         frame.add(this);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,7 +42,7 @@ public class MyMazeThing extends JPanel implements KeyListener {
     }
 
     public static void main(String[] args) {
-        new MyMazeThing();
+        new Maze();
     }
 
     void setBoard() {
