@@ -6,7 +6,7 @@ public class MovingBlock extends Block {
 
     private Orientation orientation;
     private int minimum, maximum, constant;
-    private int direction;
+    private boolean direction;
 
     public MovingBlock(int minimum, int maximum, int constant, int width, int height, Image image, Orientation orientation) {
         super(orientation == Orientation.HORIZONTAL ? minimum : constant, orientation == Orientation.HORIZONTAL ? constant : minimum, width, height, image);
@@ -14,27 +14,27 @@ public class MovingBlock extends Block {
         this.maximum = maximum;
         this.constant = constant;
         this.orientation = orientation;
-        this.direction = 1;
+        this.direction = true;
     }
 
     public void move() {
         if (orientation == Orientation.HORIZONTAL) {
             if (getLocationX() < minimum || getLocationX() > maximum)
                 changeDirection();
-            setLocationX(getLocationX() + direction);
+            setLocationX(getLocationX() + (direction ? 1 : -1));
         }
         else if (orientation == Orientation.VERTICAL) {
             if (getLocationY() < minimum || getLocationY() > maximum)
                 changeDirection();
-            setLocationY(getLocationY() + direction);
+            setLocationY(getLocationY() + (direction ? 1 : -1));
         }
     }
 
     public Orientation getOrientation() { return orientation; }
     public void setOrientation(Orientation orientation) { this.orientation = orientation; }
 
-    public int getDirection() { return direction; }
-    public void changeDirection() { this.direction *= -1; }
+    public boolean getDirection() { return direction; }
+    public void changeDirection() { this.direction = !this.direction; }
 
     public int getMinimum() { return minimum; }
     public void setMinimum(int minimum) { this.minimum = minimum; }

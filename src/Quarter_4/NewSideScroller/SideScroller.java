@@ -24,6 +24,8 @@ public class SideScroller extends Application {
     private boolean isOnHorizontalBlock;
     private boolean canJump;
     private boolean debug;
+    private boolean inDeath;
+    private boolean antiGravity;
 
     private double lastLocation;
     private double velocityX, velocityY, acceleration;
@@ -35,7 +37,8 @@ public class SideScroller extends Application {
     private GraphicsContext graphicsContext;
     private Hero hero;
     private BadGuy badGuy;
-    private Coin coin;
+    private Block antigravity;
+    private Block coin;
     private MovingBlock veritcalBlock, horizontalBlock;
     private ArrayList<Block> blocks;
     private String[] strings;
@@ -70,7 +73,7 @@ public class SideScroller extends Application {
         acceleration = 1;
 
         canJump = true;
-        debug = true;
+        debug = false;
 
         hero = new Hero(screenCenter, 0, blockSize, blockSize);
         heroPosition = hero.getLocationX();
@@ -82,30 +85,33 @@ public class SideScroller extends Application {
             for (int j = 0; j < strings[i].length(); j++)
                 if (strings[i].charAt(j) == 'x')
                     blocks.add(new Block(j * blockSize, i * blockSize, blockSize, blockSize, blockImage));
+                else if (strings[i].charAt(j) == 'e')
+                    antigravity = new Block(j * blockSize, i * blockSize, blockSize, blockSize, null);
                 else if (strings[i].charAt(j) == 'b')
                     blocks.add(new BreakableBlock(j * blockSize, i * blockSize, blockSize, blockSize, coinImage, 5));
-                else if (strings[i].charAt(j) == 'o')
-                    badGuy = new BadGuy(j * blockSize, i * blockSize, blockSize, blockSize);
-                else if (strings[i].charAt(j) == 'p')
-                    coin = new Coin(j * blockSize, i * blockSize, blockSize, blockSize, coinImage);
+                else if (strings[i].charAt(j) == 'p') {
+                    coin = new Block(j * blockSize, i * blockSize, blockSize, blockSize, coinImage);
+                }
 
-        veritcalBlock = new MovingBlock(blockSize / 2, 2 * blockSize, 30 * blockSize, blockSize, 3 * blockSize, blockImage, MovingBlock.Orientation.VERTICAL);
+        veritcalBlock = new MovingBlock(blockSize / 2, 2 * blockSize, 39 * blockSize, blockSize, 3 * blockSize, blockImage, MovingBlock.Orientation.VERTICAL);
         horizontalBlock = new MovingBlock(12 * blockSize, 15 * blockSize, 3 * blockSize, 2 * blockSize, blockSize, blockImage, MovingBlock.Orientation.HORIZONTAL);
 
         blocks.add(veritcalBlock);
         blocks.add(horizontalBlock);
 
-        background1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/background.png"), 0, screenWidth, screenHeight);
-        background2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/background.png"), screenWidth, screenWidth, screenHeight);
+        badGuy = new BadGuy(26 * blockSize, 31 * blockSize, 4 * blockSize, blockSize, blockSize, MovingBlock.Orientation.HORIZONTAL);
 
-        clouds1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/clouds.png"), 0, screenWidth, screenHeight);
-        clouds2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/clouds.png"), screenWidth, screenWidth, screenHeight);
+        background1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/background.png"), 0, screenWidth, screenHeight);
+        background2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/background.png"), screenWidth, screenWidth, screenHeight);
 
-        mountains1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/mountains.png"), 0, screenWidth, screenHeight);
-        mountains2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/mountains.png"), screenWidth, screenWidth, screenHeight);
+        clouds1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/clouds.png"), 0, screenWidth, screenHeight);
+        clouds2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/clouds.png"), screenWidth, screenWidth, screenHeight);
 
-        trees1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/trees.png"), 0, screenWidth, screenHeight);
-        trees2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Background/trees.png"), screenWidth, screenWidth, screenHeight);
+        mountains1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/mountains.png"), 0, screenWidth, screenHeight);
+        mountains2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/mountains.png"), screenWidth, screenWidth, screenHeight);
+
+        trees1 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/trees.png"), 0, screenWidth, screenHeight);
+        trees2 = new BackgroundLayer(new Image("Quarter_4/NewSideScroller/Images/Background/trees.png"), screenWidth, screenWidth, screenHeight);
 
         Canvas canvas = new Canvas(screenWidth, screenHeight);
         graphicsContext = canvas.getGraphicsContext2D();
@@ -269,7 +275,7 @@ public class SideScroller extends Application {
             if (y < iterationY) {
                 // UP
                 if (velocityY < 0) {
-                    if (collisionUp() != null) {
+                    if (collisionUp() != null || hero.getLocationY() <= 0) {
                         velocityY = 0;
                         y = iterationY;
                         break collisionY;
@@ -293,6 +299,11 @@ public class SideScroller extends Application {
 
         } while (x != iterationX || y != iterationY);
 
+        // CAP TOP
+        if (hero.getLocationY() < 0)
+            while (hero.getLocationY() < 0)
+                hero.setLocationY(hero.getLocationY() + 1);
+
         // CAP LEFT
         if (hero.getLocationX() < 0)
             while (hero.getLocationX() < 0)
@@ -312,10 +323,16 @@ public class SideScroller extends Application {
     }
 
     private void moveBadGuy() {
-        if (heroPosition > badGuy.getLocationX())
-            badGuy.setDirection(false);
-        else if (heroPosition < badGuy.getLocationX())
-            badGuy.setDirection(true);
+//        if (heroPosition > badGuy.getLocationX())
+//            badGuy.setDirection(false);
+//        else if (heroPosition < badGuy.getLocationX())
+//            badGuy.setDirection(true);
+        if ((badGuy.getLocationX() < badGuy.getMinimum() && !badGuy.getDirection()) || (badGuy.getLocationX() > badGuy.getMaximum() && badGuy.getDirection()))
+            badGuy.changeDirection();
+        else if (badGuy.getLocationX() <= badGuy.getMaximum() && badGuy.getDirection())
+            badGuy.setLocationX(badGuy.getLocationX() + 1);
+        else if (badGuy.getLocationX() >= badGuy.getMinimum() && !badGuy.getDirection())
+            badGuy.setLocationX(badGuy.getLocationX() - 1);
     }
 
     private void moveBackground(double parallax) {
@@ -378,12 +395,15 @@ public class SideScroller extends Application {
         if (!coin.isConsumed())
             graphicsContext.drawImage(coin.getImage(), coin.getLocationX() - screenPosition, coin.getLocationY(), coin.getWidth(), coin.getHeight());
 
+        if (!antigravity.isConsumed())
+            graphicsContext.fillRect(antigravity.getLocationX() - screenPosition, antigravity.getLocationY(), antigravity.getWidth(), antigravity.getHeight());
+
         if (hero.getDirection())
             graphicsContext.drawImage(hero.getImage(currentTime), hero.getLocationX(), hero.getLocationY(), hero.getWidth(), hero.getHeight());
         else
             graphicsContext.drawImage(hero.getImage(currentTime), hero.getLocationX() + hero.getWidth(), hero.getLocationY(), -hero.getWidth(), hero.getHeight());
 
-        if (badGuy.getDirection())
+        if (!badGuy.getDirection())
             graphicsContext.drawImage(badGuy.getImage(currentTime), badGuy.getLocationX() - screenPosition, badGuy.getLocationY(), badGuy.getWidth(), badGuy.getHeight());
         else
             graphicsContext.drawImage(badGuy.getImage(currentTime), badGuy.getLocationX() - screenPosition + badGuy.getWidth(), badGuy.getLocationY(), -badGuy.getWidth(), badGuy.getHeight());
@@ -400,20 +420,63 @@ public class SideScroller extends Application {
                  block1.getLocationX() + block1.getWidth() > block2.getLocationX() - screenPosition));
     }
 
+//    private boolean intersectsVertical(Block block1, Block block2) {
+//        return block1.getLocationY() < block2.getLocationY() + block2.getHeight() &&
+//                block1.getLocationY() + block1.getHeight() > block2.getLocationY();
+//    }
+//
+//    private boolean intersectsHorizontal(int positionX, Block block1, Block block2) {
+//        return positionX < block2.getLocationX() - screenPosition + block2.getWidth() &&
+//                block1.getLocationX() + block1.getWidth() > block2.getLocationX() - screenPosition;
+//    }
+
     private class Animation extends AnimationTimer {
         @Override
         public void handle(long now) {
             currentTime = now;
 
+            // Gravity
+            if (intersects(hero, antigravity) && !antigravity.isConsumed()) {
+                antiGravity = true;
+                accelerationTime = now;
+                antigravity.consume();
+                blocks.remove(antigravity);
+            }
+
+            if (now - accelerationTime > 6 * 1E9) {
+                acceleration = 1;
+                antiGravity = false;
+            }
+            else if (antiGravity) {
+                acceleration = -1;
+                if (keyboard[KeyCode.S.getCode()])
+                    velocityY = 10;
+            }
+
             // DEATH
+            if (hero.getLocationY() >= screenHeight)
+                resetHero();
+
             if (keyboard[KeyCode.SPACE.getCode()]) {
                 hero.setTemporaryState(Hero.State.DEATH, currentTime);
                 draw();
                 return;
             }
 
-            if (hero.getLocationY() >= screenHeight)
-                resetHero();
+            if (intersects(hero, badGuy)) {
+                if (hero.getState() != Hero.State.DEATH && !inDeath) {
+                    hero.setTemporaryState(Hero.State.DEATH, currentTime);
+                    inDeath = true;
+                }
+                if (!hero.inTemporaryState())
+                    inDeath = false;
+                if (inDeath) {
+                    draw();
+                    return;
+                }
+                else
+                    resetHero();
+            }
 
             if (hero.getState() == Hero.State.DEATH) {
                 if (hero.inTemporaryState()) {
@@ -477,9 +540,6 @@ public class SideScroller extends Application {
                 accelerationTime = now;
             }
 
-            // Gravity
-            if (now - accelerationTime > 6 * 1E9)
-                acceleration = 1;
             velocityY += acceleration;
 
             // Moving Block collision
@@ -501,10 +561,10 @@ public class SideScroller extends Application {
 
             // Moving Blocks Parallax
             if (isOnHorizontalBlock)
-                if (collisionLeft() == null && horizontalBlock.getDirection() < 0 || collisionRight() == null && horizontalBlock.getDirection() > 0) {
-                    adjustLocationX(horizontalBlock.getDirection());
+                if (collisionLeft() == null && !horizontalBlock.getDirection() || collisionRight() == null && horizontalBlock.getDirection()) {
+                    adjustLocationX(horizontalBlock.getDirection() ? 1 : -1);
                     if (lastLocation != heroPosition)
-                        moveBackground(horizontalBlock.getDirection());
+                        moveBackground(horizontalBlock.getDirection() ? 1 : -1);
                 }
 
             // Moving Blocks

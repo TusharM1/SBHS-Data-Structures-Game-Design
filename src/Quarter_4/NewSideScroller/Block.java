@@ -9,6 +9,7 @@ public class Block {
     private int width;
     private int height;
     private Image image;
+    private boolean isConsumed;
 
     public Block(int locationX, int locationY, int width, int height, Image image) {
         this.locationX = locationX;
@@ -32,4 +33,7 @@ public class Block {
 
     public Image getImage() { return image; }
     public void setImage(Image image) { this.image = image; }
+
+    public boolean isConsumed() { return isConsumed; }
+    public void consume() { isConsumed = true; }
 }

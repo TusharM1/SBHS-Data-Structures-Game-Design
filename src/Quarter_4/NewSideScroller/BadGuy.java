@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
 
-public class BadGuy extends Block {
+public class BadGuy extends MovingBlock {
 
     private Image[] idle;
     private Image[] walking;
@@ -13,10 +13,9 @@ public class BadGuy extends Block {
 
     private long startingTime;
 
-    private boolean direction;
-
-    public BadGuy(int locationX, int locationY, int width, int height) {
-        super(locationX, locationY, width, height, null);
+    public BadGuy(int minimum, int maximum, int constant, int width, int height, Orientation orientation) {
+//        super(locationX, locationY, width, height, null);
+        super(minimum, maximum, constant, width, height, null, orientation);
 
         Image idle = new Image("Quarter_4/NewSideScroller/Images/BadGuy/idle.png");
         PixelReader idleReader = idle.getPixelReader();
@@ -31,9 +30,7 @@ public class BadGuy extends Block {
             this.walking[i] = new WritableImage(walkingReader, i * (int) walking.getHeight(), 0, (int) walking.getHeight(), (int) walking.getHeight());
 
         currentState = State.IDLE;
-        direction = false;
     }
-
 
     public void setState(State state, long now) {
         this.currentState = state;
@@ -55,8 +52,8 @@ public class BadGuy extends Block {
         }
     }
 
-    public boolean getDirection() { return direction; }
-    public void setDirection(boolean direction) { this.direction = direction; }
+    @Override
+    public boolean getDirection() { return !super.getDirection(); }
 
     public enum State {
         IDLE, WALKING
