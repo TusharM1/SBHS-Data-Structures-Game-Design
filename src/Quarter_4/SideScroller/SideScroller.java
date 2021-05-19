@@ -67,7 +67,7 @@ public class SideScroller extends Application {
         screenHeight = strings.length * blockSize;
         screenWidth = screenWidth / blockSize * blockSize;
 
-//        screenCenter = (screenWidth - blockSize) / 2;
+        screenCenter = (screenWidth - blockSize) / 2;
         screenCenter = (int) (2.5 * blockSize);
 
         acceleration = 1;
@@ -420,15 +420,15 @@ public class SideScroller extends Application {
                  block1.getLocationX() + block1.getWidth() > block2.getLocationX() - screenPosition));
     }
 
-//    private boolean intersectsVertical(Block block1, Block block2) {
-//        return block1.getLocationY() < block2.getLocationY() + block2.getHeight() &&
-//                block1.getLocationY() + block1.getHeight() > block2.getLocationY();
-//    }
-//
-//    private boolean intersectsHorizontal(int positionX, Block block1, Block block2) {
-//        return positionX < block2.getLocationX() - screenPosition + block2.getWidth() &&
-//                block1.getLocationX() + block1.getWidth() > block2.getLocationX() - screenPosition;
-//    }
+    private boolean intersectsVertical(Block block1, Block block2) {
+        return block1.getLocationY() < block2.getLocationY() + block2.getHeight() &&
+                block1.getLocationY() + block1.getHeight() > block2.getLocationY();
+    }
+
+    private boolean intersectsHorizontal(int positionX, Block block1, Block block2) {
+        return positionX < block2.getLocationX() - screenPosition + block2.getWidth() &&
+                block1.getLocationX() + block1.getWidth() > block2.getLocationX() - screenPosition;
+    }
 
     private class Animation extends AnimationTimer {
         @Override
